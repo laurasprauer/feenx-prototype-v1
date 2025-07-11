@@ -617,7 +617,7 @@ export default function Dashboard() {
                 <p className="text-[#1D2F29]/80 text-xs mb-3">
                   Keep the momentum going, together
                 </p>
-                <Button className="bg-[#4FA587] hover:bg-[#3F8F77] text-white text-xs px-4 py-2 h-auto flex items-center gap-2">
+                <Button className="bg-[#4FA587] hover:bg-[#3F8F77] text-white text-xs px-4 py-2 h-auto inline-flex items-center gap-2">
                   Chat with Marcus
                   <svg
                     width="14"

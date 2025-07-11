@@ -19,7 +19,7 @@ const recipes: Recipe[] = [
     id: "sunlit-beet",
     name: "Sunlit Beet & Garden Herb Bowl",
     image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/6115b43f0502eb2163cab1bf3846d707245bce57?width=1420",
+      "https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2Fe06596e18f9b4dd0870bf0d7497b07da?format=webp&width=800",
     tags: [
       { label: "Low-prep", color: "#BDDFD3" },
       { label: "Hormone balance", color: "#8FE9BC" },

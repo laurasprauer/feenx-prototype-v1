@@ -452,7 +452,7 @@ export default function Dashboard() {
                       <svg
                         width="10"
                         height="9"
-                        viewBox="0 0 9 9"
+                        viewBox="0 0 10 9"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -576,7 +576,7 @@ export default function Dashboard() {
                   <svg
                     width="10"
                     height="9"
-                    viewBox="0 0 9 9"
+                    viewBox="0 0 10 9"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -683,7 +683,7 @@ export default function Dashboard() {
                     <svg
                       width="10"
                       height="9"
-                      viewBox="0 0 9 9"
+                      viewBox="0 0 10 9"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -811,7 +811,7 @@ export default function Dashboard() {
                     <svg
                       width="10"
                       height="9"
-                      viewBox="0 0 9 9"
+                      viewBox="0 0 10 9"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >

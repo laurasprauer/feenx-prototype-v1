@@ -157,7 +157,7 @@ export default function MealPrepBlueprint() {
       </header>
 
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto px-4 py-6">
+      <div className="max-w-[900px] mx-auto px-4 py-6">
         {/* Top Section */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-4">

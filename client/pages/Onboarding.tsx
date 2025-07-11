@@ -209,6 +209,7 @@ const goals: Goal[] = [
 
 export default function Onboarding() {
   const [selectedGoals, setSelectedGoals] = useState<string[]>([]);
+  const navigate = useNavigate();
 
   const toggleGoal = (goalId: string) => {
     setSelectedGoals((prev) =>

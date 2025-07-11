@@ -41,7 +41,7 @@ const recipes: Recipe[] = [
     id: "overnight-oats",
     name: "Overnight Oats",
     image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/daa4b92ec67d8eb388ccb8af98bae9009c96865e?width=1059",
+      "https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F072b71aa7c9042518935cf6a26eb0d4e?format=webp&width=800",
     tags: [
       { label: "Energy boost", color: "#C7F8C5" },
       { label: "Anti-inflammatory", color: "#E95929", textColor: "#FFF" },

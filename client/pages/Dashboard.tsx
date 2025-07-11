@@ -260,7 +260,7 @@ export default function Dashboard() {
           </div>
 
           {/* Action Icons */}
-          <div className="flex gap-3">
+          <div className="flex gap-5">
             {/* Settings */}
             <button className="w-[30px] h-[30px] bg-[#1D2F29] rounded-full flex items-center justify-center hover:bg-[#2a3f39] transition-colors">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
@@ -331,7 +331,7 @@ export default function Dashboard() {
               </div>
               <div className="p-6 space-y-6 flex-1">
                 {/* 8 Day Streak */}
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-5">
                   <div className="w-9 h-9 bg-[#E95929] rounded-full flex items-center justify-center">
                     <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
                       <path
@@ -354,7 +354,7 @@ export default function Dashboard() {
                 <div className="h-px bg-[#D9D9D9] rounded-full"></div>
 
                 {/* Meal Tracker */}
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-5">
                   <div className="w-9 h-9 bg-[#4FA587] rounded-full flex items-center justify-center">
                     <svg
                       width="21"
@@ -440,7 +440,7 @@ export default function Dashboard() {
                 <div className="h-px bg-[#D9D9D9] rounded-full"></div>
 
                 {/* Energy Check-In */}
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-5">
                   <div className="w-9 h-9 bg-[#D7CFBA] rounded-full flex items-center justify-center">
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
                       <path
@@ -488,7 +488,7 @@ export default function Dashboard() {
                 <div className="h-px bg-[#D9D9D9] rounded-full"></div>
 
                 {/* Healthy Habits */}
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-5">
                   <div className="w-9 h-9 bg-[#69BCDF] rounded-full flex items-center justify-center">
                     <svg
                       width="18"
@@ -758,7 +758,7 @@ export default function Dashboard() {
                         : "border-[#D9D9D9] bg-white hover:bg-gray-50"
                     }`}
                   >
-                    <div className="flex items-start gap-3">
+                    <div className="flex items-start gap-5">
                       <div
                         className={`w-7 h-7 rounded-full flex items-center justify-center ${
                           selectedMeals.includes(meal.id)
@@ -896,7 +896,7 @@ export default function Dashboard() {
                         : "border-[#D9D9D9] bg-white hover:bg-gray-50"
                     }`}
                   >
-                    <div className="flex items-start gap-3">
+                    <div className="flex items-start gap-5">
                       <div
                         className={`w-7 h-7 rounded-full flex items-center justify-center ${
                           selectedHabits.includes(habit.id)

@@ -320,7 +320,7 @@ export default function Dashboard() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Today's Health Snapshot */}
           <div className="lg:col-span-1 h-full">
-            <div className="bg-white rounded-lg border border-[#4FA587] shadow-sm">
+            <div className="bg-white rounded-lg border border-[#4FA587] shadow-sm h-full flex flex-col">
               <div className="bg-[#1D2F29] text-white p-4 rounded-t-lg">
                 <h2 className="text-lg font-bold">Today's Health Snapshot</h2>
               </div>

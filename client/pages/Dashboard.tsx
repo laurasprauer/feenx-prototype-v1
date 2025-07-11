@@ -447,7 +447,7 @@ export default function Dashboard() {
                     <p className="text-[#676767] text-sm">
                       Record your energy to stay in tune with your body.
                     </p>
-                    <Button className="mt-2 bg-[#D7CFBA] hover:bg-[#C7BFAA] text-black text-xs px-3 py-1 h-auto flex items-center gap-1">
+                    <Button className="mt-2 bg-[#D7CFBA] hover:bg-[#C7BFAA] text-black text-xs px-3 py-1 h-auto flex items-center gap-1 rounded-full">
                       Log
                       <svg
                         width="10"
@@ -571,7 +571,7 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="bg-[#1D2F29] h-12 rounded-b-lg flex items-center justify-end px-6">
-                <Button className="bg-[#8FE9BC] hover:bg-[#7FD9AC] text-black text-xs px-4 py-1 h-auto flex items-center gap-1">
+                <Button className="bg-[#8FE9BC] hover:bg-[#7FD9AC] text-black text-xs px-4 py-1 h-auto flex items-center gap-1 rounded-full">
                   Learn More
                   <svg
                     width="10"
@@ -610,7 +610,7 @@ export default function Dashboard() {
                     I'm here to cheer you on and make sure you're feeling your
                     best, inside and out.
                   </p>
-                  <Button className="bg-[#406057] hover:bg-[#365147] text-white text-xs px-4 py-2 h-auto flex items-center gap-2">
+                  <Button className="bg-[#406057] hover:bg-[#365147] text-white text-xs px-4 py-2 h-auto flex items-center gap-2 rounded-full">
                     Chat with Avery
                     <svg
                       width="14"
@@ -649,7 +649,7 @@ export default function Dashboard() {
                 <p className="text-[#1D2F29]/80 text-xs mb-3">
                   Keep the momentum going, together
                 </p>
-                <Button className="bg-[#4FA587] hover:bg-[#3F8F77] text-white text-xs px-4 py-2 h-auto inline-flex items-center gap-2 max-w-[160px]">
+                <Button className="bg-[#4FA587] hover:bg-[#3F8F77] text-white text-xs px-4 py-2 h-auto inline-flex items-center gap-2 max-w-[160px] rounded-full">
                   Chat with Marcus
                   <svg
                     width="14"
@@ -678,7 +678,7 @@ export default function Dashboard() {
                   Today's Meals
                 </h2>
                 <div className="flex items-center gap-2">
-                  <Button className="bg-[#4FA587] hover:bg-[#3F8F77] text-white text-xs px-3 py-1 h-auto flex items-center gap-1">
+                  <Button className="bg-[#4FA587] hover:bg-[#3F8F77] text-white text-xs px-3 py-1 h-auto flex items-center gap-1 rounded-full">
                     View Meal Plan
                     <svg
                       width="10"
@@ -806,7 +806,7 @@ export default function Dashboard() {
                   Healthy Habits
                 </h2>
                 <div className="flex items-center gap-2">
-                  <Button className="bg-[#69BCDF] hover:bg-[#59ACCF] text-white text-xs px-3 py-1 h-auto flex items-center gap-1">
+                  <Button className="bg-[#69BCDF] hover:bg-[#59ACCF] text-white text-xs px-3 py-1 h-auto flex items-center gap-1 rounded-full">
                     Edit Your Habits
                     <svg
                       width="10"

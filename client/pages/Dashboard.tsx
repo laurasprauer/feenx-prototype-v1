@@ -881,8 +881,8 @@ export default function Dashboard() {
                   <div className="flex rounded-lg overflow-hidden">
                     <div className="bg-[#1D2F29] p-4 flex items-center justify-start">
                       <svg
-                        width="24"
-                        height="24"
+                        width="32"
+                        height="32"
                         viewBox="0 0 37 37"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"

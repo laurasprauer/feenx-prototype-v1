@@ -27,7 +27,7 @@ const mealPrepStyles: MealPrepStyle[] = [
     iconColor: "#3D7086",
     icon: (
       <div
-        className="w-[20px] h-[20px] rounded-full flex items-center justify-center"
+        className="w-[37px] h-[37px] rounded-full flex items-center justify-center"
         style={{ backgroundColor: "#3D7086" }}
       >
         <svg
@@ -50,8 +50,8 @@ const mealPrepStyles: MealPrepStyle[] = [
     iconColor: "#C7F8C5",
     icon: (
       <svg
-        width="20"
-        height="20"
+        width="37"
+        height="37"
         viewBox="0 0 37 37"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -74,8 +74,8 @@ const mealPrepStyles: MealPrepStyle[] = [
     iconColor: "#4FA587",
     icon: (
       <svg
-        width="20"
-        height="20"
+        width="37"
+        height="37"
         viewBox="0 0 37 37"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -96,8 +96,8 @@ const mealPrepStyles: MealPrepStyle[] = [
     iconColor: "#69BCDF",
     icon: (
       <svg
-        width="20"
-        height="20"
+        width="37"
+        height="37"
         viewBox="0 0 37 37"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

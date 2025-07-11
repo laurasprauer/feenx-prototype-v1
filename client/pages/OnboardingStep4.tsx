@@ -150,8 +150,8 @@ export default function OnboardingStep4() {
   const handleNext = () => {
     console.log("Selected style:", selectedStyle);
     console.log("Selected day:", selectedDay);
-    // Complete onboarding - could navigate to dashboard or success page
-    // navigate("/dashboard");
+    // Complete onboarding - navigate to dashboard
+    navigate("/dashboard");
   };
 
   return (

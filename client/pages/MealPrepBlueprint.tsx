@@ -311,22 +311,17 @@ export default function MealPrepBlueprint() {
                         }`}
                       >
                         <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill={
+                            dislikedRecipes.includes(recipe.id)
+                              ? "white"
+                              : "#5f6368"
+                          }
                         >
-                          <path
-                            d="M10 15V6.5C10 5.11929 11.1193 4 12.5 4C13.8807 4 15 5.11929 15 6.5V9M6 15H5C3.89543 15 3 14.1046 3 13V11C3 9.89543 3.89543 9 5 9H7L10 5V15H8L6 15ZM6 15L8 18.5C8.55228 19.0523 9.22065 19.3657 9.9213 19.3891L11.5 19.4211C13.9853 19.5152 16 17.6258 16 15.1391V13C16 11.3431 14.6569 10 13 10H11"
-                            stroke={
-                              dislikedRecipes.includes(recipe.id)
-                                ? "white"
-                                : "#666"
-                            }
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
+                          <path d="M120-320q-32 0-56-24t-24-56v-80q0-7 2-15t4-15l120-282q9-20 30-34t44-14h440v520L440-82q-15 15-35.5 17.5T365-72q-19-10-28-28t-4-37l45-183H120Zm480-34v-406H240L120-480v80h360l-54 220 174-174Zm200-486q33 0 56.5 23.5T880-760v360q0 33-23.5 56.5T800-320H680v-80h120v-360H680v-80h120Zm-200 80v406-406Z" />
                         </svg>
                       </button>
 

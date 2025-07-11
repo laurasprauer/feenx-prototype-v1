@@ -470,7 +470,7 @@ export default function Dashboard() {
                   <div className="w-16 h-16 bg-[#CBE3DA] rounded-lg border border-[#1D2F29] shadow-md p-3">
                     <div className="w-12 h-12 rounded-full border border-[#1D2F29] bg-white overflow-hidden">
                       <img
-                        src="https://cdn.builder.io/o/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F1f0195745982498688010df9715aa959?alt=media&token=2aa0d0c5-3409-4c2e-9692-bd68aec1963d&apiKey=266bc377e3374574a92ed7ad03b8b7e7"
+                        src="https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F132c9b9b6b8d4ff5b9b6c416e1449cc2?format=webp&width=800"
                         alt="Coach Avery"
                         className="w-full h-full object-cover"
                       />

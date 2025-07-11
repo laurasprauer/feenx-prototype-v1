@@ -12,6 +12,7 @@ import OnboardingStep2 from "./pages/OnboardingStep2";
 import OnboardingStep3 from "./pages/OnboardingStep3";
 import OnboardingStep4 from "./pages/OnboardingStep4";
 import Dashboard from "./pages/Dashboard";
+import MealPrepBlueprint from "./pages/MealPrepBlueprint";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();

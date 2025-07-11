@@ -51,9 +51,8 @@ export default function OnboardingStep2() {
   };
 
   const handleNext = () => {
-    // Navigate to step 3 (to be created)
     console.log("Selected conditions:", selectedConditions);
-    // navigate("/onboarding/step3");
+    navigate("/onboarding/step3");
   };
 
   return (

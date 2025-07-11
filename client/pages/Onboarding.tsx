@@ -363,10 +363,10 @@ export default function Onboarding() {
             <button
               key={goal.id}
               onClick={() => toggleGoal(goal.id)}
-              className={`p-4 border rounded-xl bg-white shadow-sm transition-all duration-200 hover:shadow-md ${
+              className={`p-4 border rounded-xl shadow-sm transition-all duration-200 hover:shadow-md ${
                 selectedGoals.includes(goal.id)
-                  ? "border-[#4FA587] border-2"
-                  : "border-[#4FA587]"
+                  ? "border-[#E95929] border-2 bg-[#FFF4F1]"
+                  : "border-[#4FA587] bg-white"
               }`}
             >
               <div className="flex flex-col items-center text-center space-y-3">

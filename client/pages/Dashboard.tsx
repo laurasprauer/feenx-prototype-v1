@@ -573,113 +573,115 @@ export default function Dashboard() {
                 </Button>
               </div>
             </div>
+          </div>
+        </div>
 
-            {/* Today's Meals */}
-            <div className="bg-white rounded-lg border border-[#4FA587] shadow-sm">
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-6">
-                  <h2 className="text-lg font-bold text-[#1D2F29]">
-                    Today's Meals
-                  </h2>
+        {/* Today's Meals - Full Width */}
+        <div className="mt-6">
+          <div className="bg-white rounded-lg border border-[#4FA587] shadow-sm">
+            <div className="p-6">
+              <div className="flex justify-between items-start mb-6">
+                <h2 className="text-lg font-bold text-[#1D2F29]">
+                  Today's Meals
+                </h2>
+                <div className="flex items-center gap-2">
+                  <Button className="bg-[#4FA587] hover:bg-[#3F8F77] text-white text-xs px-3 py-1 h-auto">
+                    View Meal Plan →
+                  </Button>
                   <div className="flex items-center gap-2">
-                    <Button className="bg-[#4FA587] hover:bg-[#3F8F77] text-white text-xs px-3 py-1 h-auto">
-                      View Meal Plan →
-                    </Button>
-                    <div className="flex items-center gap-2">
-                      <div className="flex-1 bg-[#4FA587]/30 h-1 rounded-full w-20">
-                        <div
-                          className="bg-[#4FA587] h-1 rounded-full"
-                          style={{ width: "25%" }}
-                        ></div>
-                      </div>
-                      <span className="text-xs bg-[#1D2F29] text-white px-2 py-1 rounded">
-                        1/4
-                      </span>
+                    <div className="flex-1 bg-[#4FA587]/30 h-1 rounded-full w-20">
+                      <div
+                        className="bg-[#4FA587] h-1 rounded-full"
+                        style={{ width: "25%" }}
+                      ></div>
                     </div>
+                    <span className="text-xs bg-[#1D2F29] text-white px-2 py-1 rounded">
+                      1/4
+                    </span>
                   </div>
                 </div>
+              </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {meals.map((meal) => (
-                    <button
-                      key={meal.id}
-                      onClick={() => toggleMeal(meal.id)}
-                      className={`p-4 rounded-lg border transition-all duration-300 text-left ${
-                        selectedMeals.includes(meal.id)
-                          ? "border-[#4FA587] bg-[#E0F1EB]"
-                          : "border-[#D9D9D9] bg-white hover:bg-gray-50"
-                      }`}
-                    >
-                      <div className="flex items-start gap-3">
-                        <div
-                          className={`w-7 h-7 rounded-full flex items-center justify-center ${
-                            selectedMeals.includes(meal.id)
-                              ? "bg-[#4FA587]"
-                              : "bg-[#F1F1F1] border border-[#D9D9D9]"
-                          }`}
-                        >
-                          {selectedMeals.includes(meal.id) && (
-                            <svg
-                              width="11"
-                              height="8"
-                              viewBox="0 0 11 8"
-                              fill="none"
-                            >
-                              <path
-                                d="M9.70071 0.36792C9.98646 0.368121 10.2391 0.47908 10.4393 0.676026C10.6427 0.876217 10.756 1.13197 10.7561 1.42114C10.7561 1.63818 10.6923 1.83676 10.5747 2.00674L10.4393 2.16626L4.86295 7.66827C4.66269 7.86519 4.41019 7.97624 4.12439 7.97638C3.83826 7.97638 3.58405 7.86546 3.38366 7.66827L0.770305 5.09645C0.564006 4.89317 0.453294 4.63189 0.462199 4.33822C0.470948 4.05423 0.585463 3.80327 0.785587 3.60621C0.988843 3.40625 1.24589 3.29824 1.5329 3.29813C1.82001 3.29813 2.07686 3.40625 2.28018 3.60621L2.28238 3.60841L4.12439 5.43295L8.95996 0.676026C9.16037 0.478834 9.41458 0.36792 9.70071 0.36792Z"
-                                fill="white"
-                              />
-                            </svg>
-                          )}
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="font-semibold text-[#1D2F29] text-sm mb-1">
-                            {meal.name}
-                          </h3>
-                          <div className="flex items-center gap-2 text-[#676767] text-xs">
-                            <span>{meal.type}</span>
-                            <div className="w-1 h-1 bg-[#E0E0E0] rounded-full"></div>
-                            <span>{meal.calories}</span>
-                          </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {meals.map((meal) => (
+                  <button
+                    key={meal.id}
+                    onClick={() => toggleMeal(meal.id)}
+                    className={`p-4 rounded-lg border transition-all duration-300 text-left ${
+                      selectedMeals.includes(meal.id)
+                        ? "border-[#4FA587] bg-[#E0F1EB]"
+                        : "border-[#D9D9D9] bg-white hover:bg-gray-50"
+                    }`}
+                  >
+                    <div className="flex items-start gap-3">
+                      <div
+                        className={`w-7 h-7 rounded-full flex items-center justify-center ${
+                          selectedMeals.includes(meal.id)
+                            ? "bg-[#4FA587]"
+                            : "bg-[#F1F1F1] border border-[#D9D9D9]"
+                        }`}
+                      >
+                        {selectedMeals.includes(meal.id) && (
+                          <svg
+                            width="11"
+                            height="8"
+                            viewBox="0 0 11 8"
+                            fill="none"
+                          >
+                            <path
+                              d="M9.70071 0.36792C9.98646 0.368121 10.2391 0.47908 10.4393 0.676026C10.6427 0.876217 10.756 1.13197 10.7561 1.42114C10.7561 1.63818 10.6923 1.83676 10.5747 2.00674L10.4393 2.16626L4.86295 7.66827C4.66269 7.86519 4.41019 7.97624 4.12439 7.97638C3.83826 7.97638 3.58405 7.86546 3.38366 7.66827L0.770305 5.09645C0.564006 4.89317 0.453294 4.63189 0.462199 4.33822C0.470948 4.05423 0.585463 3.80327 0.785587 3.60621C0.988843 3.40625 1.24589 3.29824 1.5329 3.29813C1.82001 3.29813 2.07686 3.40625 2.28018 3.60621L2.28238 3.60841L4.12439 5.43295L8.95996 0.676026C9.16037 0.478834 9.41458 0.36792 9.70071 0.36792Z"
+                              fill="white"
+                            />
+                          </svg>
+                        )}
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-[#1D2F29] text-sm mb-1">
+                          {meal.name}
+                        </h3>
+                        <div className="flex items-center gap-2 text-[#676767] text-xs">
+                          <span>{meal.type}</span>
+                          <div className="w-1 h-1 bg-[#E0E0E0] rounded-full"></div>
+                          <span>{meal.calories}</span>
                         </div>
                       </div>
-                    </button>
-                  ))}
-                </div>
+                    </div>
+                  </button>
+                ))}
+              </div>
 
-                {/* Action Buttons */}
-                <div className="flex gap-4 mt-6">
-                  <Button className="flex-1 bg-[#8FE9BC] hover:bg-[#7FD9AC] text-[#1D2F29] font-semibold px-4 py-3 rounded-lg">
-                    <svg
-                      width="17"
-                      height="19"
-                      viewBox="0 0 17 19"
-                      fill="none"
-                      className="mr-2"
-                    >
-                      <path
-                        d="M1.88889 19C1.36944 19 0.924769 18.814 0.554861 18.4419C0.184954 18.0698 0 17.6225 0 17.1V3.8C0 3.2775 0.184954 2.83021 0.554861 2.45812C0.924769 2.08604 1.36944 1.9 1.88889 1.9H2.83333V0.95C2.83333 0.680833 2.92384 0.455208 3.10486 0.273125C3.28588 0.0910417 3.51019 0 3.77778 0C4.04537 0 4.26968 0.0910417 4.45069 0.273125C4.63171 0.455208 4.72222 0.680833 4.72222 0.95V1.9H12.2778V0.95C12.2778 0.680833 12.3683 0.455208 12.5493 0.273125C12.7303 0.0910417 12.9546 0 13.2222 0C13.4898 0 13.7141 0.0910417 13.8951 0.273125C14.0762 0.455208 14.1667 0.680833 14.1667 0.95V1.9H15.1111C15.6306 1.9 16.0752 2.08604 16.4451 2.45812C16.815 2.83021 17 3.2775 17 3.8V17.1C17 17.6225 16.815 18.0698 16.4451 18.4419C16.0752 18.814 15.6306 19 15.1111 19H1.88889ZM15.1111 17.1V3.8H1.88889V17.1H15.1111Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                    Meal Prep Blueprint
-                  </Button>
-                  <Button className="flex-1 bg-[#C7F8C5] hover:bg-[#B7E8B5] text-[#1D2F29] font-semibold px-4 py-3 rounded-lg">
-                    <svg
-                      width="19"
-                      height="19"
-                      viewBox="0 0 19 19"
-                      fill="none"
-                      className="mr-2"
-                    >
-                      <path
-                        d="M13.3 19C11.7167 19 10.3708 18.4458 9.2625 17.3375C8.15417 16.2292 7.6 14.8833 7.6 13.3C7.6 11.7167 8.15417 10.3708 9.2625 9.2625C10.3708 8.15417 11.7167 7.6 13.3 7.6C14.8833 7.6 16.2292 8.15417 17.3375 9.2625C18.4458 10.3708 19 11.7167 19 13.3C19 14.8833 18.4458 16.2292 17.3375 17.3375C16.2292 18.4458 14.8833 19 13.3 19Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                    Grocery Game Plan
-                  </Button>
-                </div>
+              {/* Action Buttons */}
+              <div className="flex gap-4 mt-6">
+                <Button className="flex-1 bg-[#8FE9BC] hover:bg-[#7FD9AC] text-[#1D2F29] font-semibold px-4 py-3 rounded-lg">
+                  <svg
+                    width="17"
+                    height="19"
+                    viewBox="0 0 17 19"
+                    fill="none"
+                    className="mr-2"
+                  >
+                    <path
+                      d="M1.88889 19C1.36944 19 0.924769 18.814 0.554861 18.4419C0.184954 18.0698 0 17.6225 0 17.1V3.8C0 3.2775 0.184954 2.83021 0.554861 2.45812C0.924769 2.08604 1.36944 1.9 1.88889 1.9H2.83333V0.95C2.83333 0.680833 2.92384 0.455208 3.10486 0.273125C3.28588 0.0910417 3.51019 0 3.77778 0C4.04537 0 4.26968 0.0910417 4.45069 0.273125C4.63171 0.455208 4.72222 0.680833 4.72222 0.95V1.9H12.2778V0.95C12.2778 0.680833 12.3683 0.455208 12.5493 0.273125C12.7303 0.0910417 12.9546 0 13.2222 0C13.4898 0 13.7141 0.0910417 13.8951 0.273125C14.0762 0.455208 14.1667 0.680833 14.1667 0.95V1.9H15.1111C15.6306 1.9 16.0752 2.08604 16.4451 2.45812C16.815 2.83021 17 3.2775 17 3.8V17.1C17 17.6225 16.815 18.0698 16.4451 18.4419C16.0752 18.814 15.6306 19 15.1111 19H1.88889ZM15.1111 17.1V3.8H1.88889V17.1H15.1111Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  Meal Prep Blueprint
+                </Button>
+                <Button className="flex-1 bg-[#C7F8C5] hover:bg-[#B7E8B5] text-[#1D2F29] font-semibold px-4 py-3 rounded-lg">
+                  <svg
+                    width="19"
+                    height="19"
+                    viewBox="0 0 19 19"
+                    fill="none"
+                    className="mr-2"
+                  >
+                    <path
+                      d="M13.3 19C11.7167 19 10.3708 18.4458 9.2625 17.3375C8.15417 16.2292 7.6 14.8833 7.6 13.3C7.6 11.7167 8.15417 10.3708 9.2625 9.2625C10.3708 8.15417 11.7167 7.6 13.3 7.6C14.8833 7.6 16.2292 8.15417 17.3375 9.2625C18.4458 10.3708 19 11.7167 19 13.3C19 14.8833 18.4458 16.2292 17.3375 17.3375C16.2292 18.4458 14.8833 19 13.3 19Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  Grocery Game Plan
+                </Button>
               </div>
             </div>
           </div>

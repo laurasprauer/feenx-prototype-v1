@@ -485,16 +485,6 @@ export default function MealPrepBlueprint() {
                 </div>
               ))}
             </div>
-
-            {/* Generate More Recipes Button */}
-            <div className="flex justify-center mt-12">
-              <Button
-                onClick={generateMoreRecipes}
-                className="bg-[#4FA587] hover:bg-[#3F8F77] text-white px-8 py-3 text-base font-medium"
-              >
-                Discover More Culinary Magic ✨
-              </Button>
-            </div>
           </div>
         </div>
       </div>

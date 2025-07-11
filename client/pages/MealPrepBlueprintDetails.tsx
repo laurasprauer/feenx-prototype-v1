@@ -205,7 +205,10 @@ export default function MealPrepBlueprintDetails() {
             Meal Prep Blueprint
           </button>
 
-          <button className="group flex items-center gap-2 bg-white text-[#1D2F29] px-4 py-2 rounded-full text-sm font-medium border border-gray-200 hover:bg-[#4FA587] hover:text-white transition-colors">
+          <Link
+            to="/view-meal-plan"
+            className="group flex items-center gap-2 bg-white text-[#1D2F29] px-4 py-2 rounded-full text-sm font-medium border border-gray-200 hover:bg-[#4FA587] hover:text-white transition-colors"
+          >
             <svg
               width="19"
               height="19"
@@ -220,7 +223,7 @@ export default function MealPrepBlueprintDetails() {
               />
             </svg>
             View Meal Plan
-          </button>
+          </Link>
         </div>
 
         {/* Recipe Header */}

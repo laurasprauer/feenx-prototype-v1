@@ -416,18 +416,7 @@ export default function MealPrepBlueprint() {
                           fill="none"
                         >
                           <path
-                            d="M17 14V6M17 14L14.5 16.5L12 14H4C2.89543 14 2 13.1046 2 12V5C2 3.89543 2.89543 3 4 3H20C21.1046 3 22 3.8 22 5V12C22 13.1046 21.1046 14 20 14H17Z"
-                            stroke={
-                              dislikedRecipes.includes(recipe.id)
-                                ? "white"
-                                : "#666"
-                            }
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <path
-                            d="M7 7L13 10M7 10L13 7"
+                            d="M10 15V6.5C10 5.11929 11.1193 4 12.5 4C13.8807 4 15 5.11929 15 6.5V9M6 15H5C3.89543 15 3 14.1046 3 13V11C3 9.89543 3.89543 9 5 9H7L10 5V15H8L6 15ZM6 15L8 18.5C8.55228 19.0523 9.22065 19.3657 9.9213 19.3891L11.5 19.4211C13.9853 19.5152 16 17.6258 16 15.1391V13C16 11.3431 14.6569 10 13 10H11"
                             stroke={
                               dislikedRecipes.includes(recipe.id)
                                 ? "white"

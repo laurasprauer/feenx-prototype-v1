@@ -1,7 +1,6 @@
-
-
 import { FeenXLogo } from "@/components/FeenXLogo";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 export default function Index() {
   return (
@@ -70,4 +69,3 @@ export default function Index() {
     </div>
   );
 }
-

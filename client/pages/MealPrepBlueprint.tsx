@@ -179,7 +179,7 @@ export default function MealPrepBlueprint() {
           </div>
 
           {/* Action Icons */}
-          <div className="flex gap-5">
+          <div className="flex gap-3">
             {/* Settings */}
             <button className="w-[30px] h-[30px] bg-[#1D2F29] rounded-full flex items-center justify-center hover:bg-[#2a3f39] transition-colors">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none">

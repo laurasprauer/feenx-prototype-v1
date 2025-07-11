@@ -449,12 +449,6 @@ export default function Dashboard() {
               <div className="bg-gradient-to-b from-[#4FA587] to-[#3C504B] rounded-t-lg p-6 text-white">
                 <div className="inline-block bg-[#1D2F29] text-white px-4 py-2 rounded-l-md text-sm font-semibold mb-4">
                   Coach's Corner
-                  <div
-                    className="absolute right-0 top-0 w-4 h-full bg-[#1D2F29]"
-                    style={{
-                      clipPath: "polygon(0 0, 100% 50%, 0 100%)",
-                    }}
-                  ></div>
                 </div>
                 <p className="text-base mb-4">
                   Your energy levels have been steady this week! Consider adding

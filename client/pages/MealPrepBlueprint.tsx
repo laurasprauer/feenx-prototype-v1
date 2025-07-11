@@ -30,7 +30,7 @@ const recipes: Recipe[] = [
     id: "avocado-crunch",
     name: "Avocado Crunch Salad",
     image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/f88f484a1f1c0138b2901485ccb6e808ceea3c97?width=2110",
+      "https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2Fd993e97fea8f439b93205adaf579acdd?format=webp&width=800",
     tags: [
       { label: "Low-prep", color: "#BDDFD3" },
       { label: "Leftovers welcome", color: "#D7CFBA" },

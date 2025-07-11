@@ -1,4 +1,5 @@
 
+
 import { FeenXLogo } from "@/components/FeenXLogo";
 import { Button } from "@/components/ui/button";
 
@@ -17,7 +18,7 @@ export default function Index() {
       <div className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 py-[60px] text-center">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 py-[100px] text-center">
         {/* Logo */}
         <div className="mb-6 sm:mb-8 lg:mb-10">
           <FeenXLogo />
@@ -69,3 +70,4 @@ export default function Index() {
     </div>
   );
 }
+

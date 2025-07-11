@@ -691,30 +691,32 @@ export default function Dashboard() {
                 <h2 className="text-lg font-bold text-[#1D2F29]">
                   Today's Meals
                 </h2>
-                <Button className="bg-[#4FA587] hover:bg-[#3F8F77] text-white text-xs px-3 py-1 h-auto flex items-center gap-1 rounded-full">
-                  View Meal Plan
-                  <svg
-                    width="10"
-                    height="9"
-                    viewBox="0 0 10 9"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.12476 5.14282L1.05946 5.13968C0.735182 5.10688 0.481898 4.8329 0.481898 4.49997C0.481898 4.16703 0.735182 3.89305 1.05946 3.86025L1.12476 3.85711H7.49997C7.85501 3.85711 8.14282 4.14492 8.14282 4.49997C8.14282 4.85501 7.85501 5.14282 7.49997 5.14282H1.12476Z"
-                      fill="white"
-                    />
-                    <path
-                      d="M4.42034 7.95453C4.6714 8.20559 5.07833 8.20559 5.32938 7.95453L8.32959 4.95432C8.58043 4.70326 8.58057 4.29627 8.32959 4.04528L5.32938 1.0457C5.07833 0.794652 4.6714 0.794652 4.42034 1.0457C4.1694 1.29676 4.16933 1.70373 4.42034 1.95474L6.96541 4.50043L4.42034 7.04549C4.16929 7.29655 4.16929 7.70348 4.42034 7.95453Z"
-                      fill="white"
-                    />
-                  </svg>
-                </Button>
+                <div className="flex items-center gap-2">
+                  <Button className="bg-[#4FA587] hover:bg-[#3F8F77] text-white text-xs px-3 py-1 h-auto flex items-center gap-1 rounded-full">
+                    View Meal Plan
+                    <svg
+                      width="10"
+                      height="9"
+                      viewBox="0 0 10 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.12476 5.14282L1.05946 5.13968C0.735182 5.10688 0.481898 4.8329 0.481898 4.49997C0.481898 4.16703 0.735182 3.89305 1.05946 3.86025L1.12476 3.85711H7.49997C7.85501 3.85711 8.14282 4.14492 8.14282 4.49997C8.14282 4.85501 7.85501 5.14282 7.49997 5.14282H1.12476Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M4.42034 7.95453C4.6714 8.20559 5.07833 8.20559 5.32938 7.95453L8.32959 4.95432C8.58043 4.70326 8.58057 4.29627 8.32959 4.04528L5.32938 1.0457C5.07833 0.794652 4.6714 0.794652 4.42034 1.0457C4.1694 1.29676 4.16933 1.70373 4.42034 1.95474L6.96541 4.50043L4.42034 7.04549C4.16929 7.29655 4.16929 7.70348 4.42034 7.95453Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </Button>
+                  <span className="text-xs bg-[#1D2F29] text-white px-2 py-1 rounded">
+                    1/4
+                  </span>
+                </div>
               </div>
-              <div className="flex items-center gap-2 mb-6">
-                <span className="text-xs bg-[#1D2F29] text-white px-2 py-1 rounded">
-                  1/4
-                </span>
+              <div className="flex justify-end mb-6">
                 <div className="relative w-full max-w-[calc(50%-0.5rem)]">
                   <div className="bg-[#4FA587]/30 h-1 rounded-full">
                     <div
@@ -826,30 +828,32 @@ export default function Dashboard() {
                 <h2 className="text-lg font-bold text-[#1D2F29]">
                   Healthy Habits
                 </h2>
-                <Button className="bg-[#69BCDF] hover:bg-[#59ACCF] text-white text-xs px-3 py-1 h-auto flex items-center gap-1 rounded-full">
-                  Edit Your Habits
-                  <svg
-                    width="10"
-                    height="9"
-                    viewBox="0 0 10 9"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.12476 5.14282L1.05946 5.13968C0.735182 5.10688 0.481898 4.8329 0.481898 4.49997C0.481898 4.16703 0.735182 3.89305 1.05946 3.86025L1.12476 3.85711H7.49997C7.85501 3.85711 8.14282 4.14492 8.14282 4.49997C8.14282 4.85501 7.85501 5.14282 7.49997 5.14282H1.12476Z"
-                      fill="white"
-                    />
-                    <path
-                      d="M4.42034 7.95453C4.6714 8.20559 5.07833 8.20559 5.32938 7.95453L8.32959 4.95432C8.58043 4.70326 8.58057 4.29627 8.32959 4.04528L5.32938 1.0457C5.07833 0.794652 4.6714 0.794652 4.42034 1.0457C4.1694 1.29676 4.16933 1.70373 4.42034 1.95474L6.96541 4.50043L4.42034 7.04549C4.16929 7.29655 4.16929 7.70348 4.42034 7.95453Z"
-                      fill="white"
-                    />
-                  </svg>
-                </Button>
+                <div className="flex items-center gap-2">
+                  <Button className="bg-[#69BCDF] hover:bg-[#59ACCF] text-white text-xs px-3 py-1 h-auto flex items-center gap-1 rounded-full">
+                    Edit Your Habits
+                    <svg
+                      width="10"
+                      height="9"
+                      viewBox="0 0 10 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.12476 5.14282L1.05946 5.13968C0.735182 5.10688 0.481898 4.8329 0.481898 4.49997C0.481898 4.16703 0.735182 3.89305 1.05946 3.86025L1.12476 3.85711H7.49997C7.85501 3.85711 8.14282 4.14492 8.14282 4.49997C8.14282 4.85501 7.85501 5.14282 7.49997 5.14282H1.12476Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M4.42034 7.95453C4.6714 8.20559 5.07833 8.20559 5.32938 7.95453L8.32959 4.95432C8.58043 4.70326 8.58057 4.29627 8.32959 4.04528L5.32938 1.0457C5.07833 0.794652 4.6714 0.794652 4.42034 1.0457C4.1694 1.29676 4.16933 1.70373 4.42034 1.95474L6.96541 4.50043L4.42034 7.04549C4.16929 7.29655 4.16929 7.70348 4.42034 7.95453Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </Button>
+                  <span className="text-xs bg-[#1D2F29] text-white px-2 py-1 rounded">
+                    3/4
+                  </span>
+                </div>
               </div>
-              <div className="flex items-center gap-2 mb-6">
-                <span className="text-xs bg-[#1D2F29] text-white px-2 py-1 rounded">
-                  3/4
-                </span>
+              <div className="flex justify-end mb-6">
                 <div className="relative w-full max-w-[calc(50%-0.5rem)]">
                   <div className="bg-[#69BCDF]/30 h-1 rounded-full">
                     <div

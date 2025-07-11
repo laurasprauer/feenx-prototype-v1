@@ -392,7 +392,10 @@ export default function Onboarding() {
           >
             Back
           </Button>
-          <Button className="bg-[#E95929] hover:bg-[#D54017] text-white font-semibold px-8 py-3 rounded-lg shadow-sm transition-colors">
+          <Button
+            onClick={() => navigate("/onboarding/step2")}
+            className="bg-[#E95929] hover:bg-[#D54017] text-white font-semibold px-8 py-3 rounded-lg shadow-sm transition-colors"
+          >
             Next
           </Button>
         </div>

@@ -451,14 +451,18 @@ export default function Dashboard() {
                   <div
                     className="bg-[#1D2F29] text-white pl-6 pr-10 py-3 text-sm font-semibold relative"
                     style={{
-                      borderRadius: "8px 0 0 8px",
+                      borderRadius: "8px 2px 2px 8px",
+                      height: "44px",
                     }}
                   >
                     Coach's Corner
                     <div
-                      className="absolute top-1/2 -right-2 w-4 h-4 bg-[#1D2F29] transform -translate-y-1/2 rotate-45"
+                      className="absolute top-1/2 bg-[#1D2F29] transform -translate-y-1/2 rotate-45"
                       style={{
-                        borderRadius: "0 6px 0 0",
+                        borderRadius: "4px 6px 4px 0px",
+                        height: "32px",
+                        width: "32px",
+                        right: "-14px",
                       }}
                     ></div>
                   </div>

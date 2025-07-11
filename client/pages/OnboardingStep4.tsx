@@ -62,7 +62,7 @@ const mealPrepStyles: MealPrepStyle[] = [
   {
     id: "fresh-daily",
     title: "The Fresh Daily",
-    description: "You love cooking fresh\nmeals daily",
+    description: "You enjoy preparing fresh,\nhome-cooked meals every day",
     iconColor: "#4FA587",
     icon: (
       <svg

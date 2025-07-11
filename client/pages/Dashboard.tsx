@@ -797,36 +797,75 @@ export default function Dashboard() {
 
               {/* Action Buttons */}
               <div className="flex gap-4 mt-6">
-                <Button className="flex-1 bg-[#8FE9BC] hover:bg-[#7FD9AC] text-[#1D2F29] font-semibold px-4 py-3 rounded-lg">
-                  <svg
-                    width="17"
-                    height="19"
-                    viewBox="0 0 17 19"
-                    fill="none"
-                    className="mr-2"
-                  >
-                    <path
-                      d="M1.88889 19C1.36944 19 0.924769 18.814 0.554861 18.4419C0.184954 18.0698 0 17.6225 0 17.1V3.8C0 3.2775 0.184954 2.83021 0.554861 2.45812C0.924769 2.08604 1.36944 1.9 1.88889 1.9H2.83333V0.95C2.83333 0.680833 2.92384 0.455208 3.10486 0.273125C3.28588 0.0910417 3.51019 0 3.77778 0C4.04537 0 4.26968 0.0910417 4.45069 0.273125C4.63171 0.455208 4.72222 0.680833 4.72222 0.95V1.9H12.2778V0.95C12.2778 0.680833 12.3683 0.455208 12.5493 0.273125C12.7303 0.0910417 12.9546 0 13.2222 0C13.4898 0 13.7141 0.0910417 13.8951 0.273125C14.0762 0.455208 14.1667 0.680833 14.1667 0.95V1.9H15.1111C15.6306 1.9 16.0752 2.08604 16.4451 2.45812C16.815 2.83021 17 3.2775 17 3.8V17.1C17 17.6225 16.815 18.0698 16.4451 18.4419C16.0752 18.814 15.6306 19 15.1111 19H1.88889ZM15.1111 17.1V3.8H1.88889V17.1H15.1111Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  Meal Prep Blueprint
-                </Button>
-                <Button className="flex-1 bg-[#C7F8C5] hover:bg-[#B7E8B5] text-[#1D2F29] font-semibold px-4 py-3 rounded-lg">
-                  <svg
-                    width="19"
-                    height="19"
-                    viewBox="0 0 19 19"
-                    fill="none"
-                    className="mr-2"
-                  >
-                    <path
-                      d="M13.3 19C11.7167 19 10.3708 18.4458 9.2625 17.3375C8.15417 16.2292 7.6 14.8833 7.6 13.3C7.6 11.7167 8.15417 10.3708 9.2625 9.2625C10.3708 8.15417 11.7167 7.6 13.3 7.6C14.8833 7.6 16.2292 8.15417 17.3375 9.2625C18.4458 10.3708 19 11.7167 19 13.3C19 14.8833 18.4458 16.2292 17.3375 17.3375C16.2292 18.4458 14.8833 19 13.3 19Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  Grocery Game Plan
-                </Button>
+                <div className="flex-1">
+                  <div className="flex rounded-lg overflow-hidden">
+                    <div className="bg-[#1D2F29] p-4 flex items-center justify-center">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
+                          stroke="white"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M16 1V5M8 1V5M3 9H21"
+                          stroke="white"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div className="bg-[#8FE9BC] flex-1 p-4 flex items-center">
+                      <span className="text-[#1D2F29] font-semibold">
+                        Meal Prep Blueprint
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-[#676767] text-sm mt-2">
+                    Healthy eating starts with a plan
+                  </p>
+                </div>
+                <div className="flex-1">
+                  <div className="flex rounded-lg overflow-hidden">
+                    <div className="bg-[#1D2F29] p-4 flex items-center justify-center">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7 4V2C7 1.44772 7.44772 1 8 1H16C16.5523 1 17 1.44772 17 2V4H20C20.5523 4 21 4.44772 21 5C21 5.55228 20.5523 6 20 6H19V19C19 20.6569 17.6569 22 16 22H8C6.34315 22 5 20.6569 5 19V6H4C3.44772 6 3 5.55228 3 5C3 4.44772 3.44772 4 4 4H7Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M9 8V18M15 8V18"
+                          stroke="#1D2F29"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div className="bg-[#C7F8C5] flex-1 p-4 flex items-center">
+                      <span className="text-[#1D2F29] font-semibold">
+                        Grocery Game Plan
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-[#676767] text-sm mt-2">
+                    Organize your shopping with ease
+                  </p>
+                </div>
               </div>
             </div>
           </div>

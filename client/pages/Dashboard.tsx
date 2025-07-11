@@ -686,7 +686,7 @@ export default function Dashboard() {
         </div>
 
         {/* Bottom Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+        <div className="grid grid-cols-1 gap-6 mt-6">
           {/* Healthy Habits */}
           <div className="bg-white rounded-lg border border-[#4FA587] shadow-sm">
             <div className="p-6">

@@ -262,8 +262,8 @@ export default function MealPrepBlueprint() {
 
           <button className="flex items-center gap-2 bg-[#1D2F29] text-white px-4 py-2 rounded-full text-sm font-medium">
             <svg
-              width="11"
-              height="11"
+              width="17"
+              height="17"
               viewBox="0 0 11 11"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

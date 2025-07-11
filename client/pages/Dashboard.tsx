@@ -535,7 +535,7 @@ export default function Dashboard() {
               <div className="bg-gradient-to-b from-[#4FA587] to-[#3C504B] rounded-t-lg pt-6 pb-6 pl-6 pr-6 text-white relative">
                 <div className="relative inline-block mb-4">
                   <div
-                    className="bg-[#1D2F29] text-white pl-6 pr-10 py-3 text-sm font-semibold relative"
+                    className="bg-[#1D2F29] text-white pl-6 pr-6 py-3 text-sm font-semibold relative"
                     style={{
                       borderRadius: "8px 2px 2px 8px",
                       height: "44px",

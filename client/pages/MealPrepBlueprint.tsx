@@ -52,7 +52,7 @@ const recipes: Recipe[] = [
     id: "chicken-avocado",
     name: "Chicken & Avocado Power Bowl",
     image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/93e36193f4036a3db7426e608c48ca6afeb12310?width=708",
+      "https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F1db30bb9a3604841b00e870a429521e0?format=webp&width=800",
     tags: [
       { label: "High protein", color: "#3D7086", textColor: "#FFF" },
       { label: "Energy boost", color: "#C7F8C5" },

@@ -634,7 +634,7 @@ export default function Dashboard() {
               <div className="bg-[#1D2F29] rounded-l-lg p-4 flex flex-col items-center justify-center">
                 <div className="w-12 h-12 rounded-full border border-[#BBC1BF] bg-white overflow-hidden mb-2">
                   <img
-                    src="https://cdn.builder.io/o/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F1f0195745982498688010df9715aa959?alt=media&token=2aa0d0c5-3409-4c2e-9692-bd68aec1963d&apiKey=266bc377e3374574a92ed7ad03b8b7e7"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2Fcdc7a4b2de164c56b2e3a46016272002?format=webp&width=800"
                     alt="Marcus"
                     className="w-full h-full object-cover"
                   />

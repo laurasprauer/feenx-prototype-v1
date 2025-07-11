@@ -37,6 +37,7 @@ const App = () => (
             path="/meal-prep-blueprint"
             element={<MealPrepBlueprintDetails />}
           />
+          <Route path="/view-meal-plan" element={<ViewMealPlan />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

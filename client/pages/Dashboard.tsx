@@ -496,7 +496,10 @@ export default function Dashboard() {
                   Learn More →
                 </Button>
               </div>
-              <div className="bg-[#CBE3DA] rounded-lg border border-[#1D2F29] shadow-md p-4 mt-8 flex items-start gap-4">
+              <div
+                className="bg-[#CBE3DA] rounded-lg border border-[#1D2F29] shadow-md p-4 mt-8 flex items-start gap-4 max-w-md ml-auto mr-0"
+                style={{ marginRight: "-100px" }}
+              >
                 <div className="w-16 h-16 rounded-full border border-[#1D2F29] bg-white overflow-hidden flex-shrink-0">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F132c9b9b6b8d4ff5b9b6c416e1449cc2?format=webp&width=800"

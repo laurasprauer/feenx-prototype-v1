@@ -224,7 +224,7 @@ export default function MealPrepBlueprintDetails() {
         </div>
 
         {/* Recipe Header */}
-        <div className="bg-white rounded-lg border border-[#1D2F29] shadow-sm mb-6">
+        <div className="bg-white rounded-lg border border-[#4FA587] shadow-sm mb-6">
           <div className="p-6">
             <div className="flex gap-6">
               <div className="w-32 h-32 rounded-lg overflow-hidden flex-shrink-0">
@@ -276,13 +276,13 @@ export default function MealPrepBlueprintDetails() {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-3 gap-4 mb-6">
-          <div className="bg-white rounded-lg border border-gray-200 p-4 text-center">
+          <div className="bg-white rounded-lg border border-[#4FA587] p-4 text-center">
             <svg
               className="w-8 h-8 mx-auto mb-2 text-[#4FA587]"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8zM12 17.5L8.5 15l3.5-2.5 3.5 2.5-3.5 2.5z" />
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-.5-13H10v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
             </svg>
             <div className="text-2xl font-bold text-[#1D2F29] mb-1">
               {recipe.stats.totalTime}
@@ -290,7 +290,7 @@ export default function MealPrepBlueprintDetails() {
             <div className="text-sm text-gray-600">Total Time</div>
           </div>
 
-          <div className="bg-white rounded-lg border border-gray-200 p-4 text-center">
+          <div className="bg-white rounded-lg border border-[#4FA587] p-4 text-center">
             <svg
               className="w-8 h-8 mx-auto mb-2 text-[#E95929]"
               fill="currentColor"
@@ -304,7 +304,7 @@ export default function MealPrepBlueprintDetails() {
             <div className="text-sm text-gray-600">Meals Prepped</div>
           </div>
 
-          <div className="bg-white rounded-lg border border-gray-200 p-4 text-center">
+          <div className="bg-white rounded-lg border border-[#4FA587] p-4 text-center">
             <svg
               className="w-8 h-8 mx-auto mb-2 text-[#4FA587]"
               fill="currentColor"
@@ -322,7 +322,7 @@ export default function MealPrepBlueprintDetails() {
         </div>
 
         {/* Tools Section */}
-        <div className="bg-white rounded-lg border border-[#1D2F29] shadow-sm mb-6">
+        <div className="bg-white rounded-lg border border-[#4FA587] shadow-sm mb-6">
           <div className="p-6">
             <h2 className="text-xl font-bold text-[#1D2F29] mb-4 font-display">
               Tools You'll Need
@@ -339,7 +339,7 @@ export default function MealPrepBlueprintDetails() {
         </div>
 
         {/* Prep Order Section */}
-        <div className="bg-white rounded-lg border border-[#1D2F29] shadow-sm">
+        <div className="bg-white rounded-lg border border-[#4FA587] shadow-sm">
           <div className="p-6">
             <h2 className="text-xl font-bold text-[#1D2F29] mb-6 font-display">
               Prep Order

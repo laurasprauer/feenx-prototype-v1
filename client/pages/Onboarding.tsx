@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { FeenXLogo } from "@/components/FeenXLogo";
 
 interface Goal {
   id: string;

@@ -465,39 +465,36 @@ export default function Dashboard() {
                   Learn More →
                 </Button>
               </div>
-              <div className="bg-[#1D2F29] h-12 rounded-b-lg relative">
-                <div className="absolute left-3 bottom-0 transform translate-y-4">
-                  <div className="w-16 h-16 bg-[#CBE3DA] rounded-lg border border-[#1D2F29] shadow-md p-3">
-                    <div className="w-12 h-12 rounded-full border border-[#1D2F29] bg-white overflow-hidden">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F132c9b9b6b8d4ff5b9b6c416e1449cc2?format=webp&width=800"
-                        alt="Coach Avery"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
+              <div className="bg-[#1D2F29] h-12 rounded-b-lg"></div>
+              <div className="bg-[#CBE3DA] rounded-lg border border-[#1D2F29] shadow-md p-4 mt-8 flex items-start gap-4">
+                <div className="w-16 h-16 rounded-full border border-[#1D2F29] bg-white overflow-hidden flex-shrink-0">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F132c9b9b6b8d4ff5b9b6c416e1449cc2?format=webp&width=800"
+                    alt="Coach Avery"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              </div>
-              <div className="bg-[#CBE3DA] rounded-lg border border-[#1D2F29] shadow-md p-4 mt-8 ml-20">
-                <p className="text-xs text-black/50 mb-2">
-                  AI Insights from Coach Avery
-                </p>
-                <p className="text-sm text-black/80 mb-3">
-                  I'm here to cheer you on and make sure you're feeling your
-                  best, inside and out.
-                </p>
-                <Button className="bg-[#406057] hover:bg-[#365147] text-white text-xs px-4 py-1 h-auto flex items-center gap-2">
-                  Chat with Avery
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </Button>
+                <div className="flex-1">
+                  <p className="text-xs text-black/50 mb-2">
+                    AI Insights from Coach Avery
+                  </p>
+                  <p className="text-sm text-black/80 mb-3">
+                    I'm here to cheer you on and make sure you're feeling your
+                    best, inside and out.
+                  </p>
+                  <Button className="bg-[#406057] hover:bg-[#365147] text-white text-xs px-4 py-1 h-auto flex items-center gap-2">
+                    Chat with Avery
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </Button>
+                </div>
               </div>
             </div>
 

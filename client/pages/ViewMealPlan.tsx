@@ -1,106 +1,64 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 
-interface Recipe {
-  id: string;
-  name: string;
-  image: string;
-  tags: Tag[];
-}
+export default function ViewMealPlan() {
+  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
 
-interface Tag {
-  label: string;
-  color: string;
-  textColor?: string;
-}
+  const filters = [
+    "Low-prep only",
+    "Hormone-supportive",
+    "Include leftovers",
+    "Exclude dairy",
+  ];
 
-const recipes: Recipe[] = [
-  {
-    id: "sunlit-beet",
-    name: "Sunlit Beet & Garden Herb Bowl",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2Fe06596e18f9b4dd0870bf0d7497b07da?format=webp&width=800",
-    tags: [
-      { label: "Low-prep", color: "#BDDFD3" },
-      { label: "Hormone balance", color: "#8FE9BC" },
-      { label: "Anti-inflammatory", color: "#E95929", textColor: "#FFF" },
-    ],
-  },
-  {
-    id: "avocado-crunch",
-    name: "Avocado Crunch Salad",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2Fd993e97fea8f439b93205adaf579acdd?format=webp&width=800",
-    tags: [
-      { label: "Low-prep", color: "#BDDFD3" },
-      { label: "Leftovers welcome", color: "#D7CFBA" },
-      { label: "Energy boost", color: "#C7F8C5" },
-      { label: "Heart healthy", color: "#FFE4D6" },
-    ],
-  },
-  {
-    id: "overnight-oats",
-    name: "Overnight Oats",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F072b71aa7c9042518935cf6a26eb0d4e?format=webp&width=800",
-    tags: [
-      { label: "Energy boost", color: "#C7F8C5" },
-      { label: "Anti-inflammatory", color: "#E95929", textColor: "#FFF" },
-      { label: "Leftovers welcome", color: "#D7CFBA" },
-    ],
-  },
-  {
-    id: "chicken-avocado",
-    name: "Chicken & Avocado Power Bowl",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F1db30bb9a3604841b00e870a429521e0?format=webp&width=800",
-    tags: [
-      { label: "High protein", color: "#3D7086", textColor: "#FFF" },
-      { label: "Energy boost", color: "#C7F8C5" },
-      { label: "Low-prep", color: "#BDDFD3" },
-      { label: "Anti-inflammatory", color: "#E95929", textColor: "#FFF" },
-    ],
-  },
-];
-
-export default function MealPrepBlueprint() {
-  const [selectedRecipes, setSelectedRecipes] = useState<string[]>([]);
-  const [dislikedRecipes, setDislikedRecipes] = useState<string[]>([]);
-  const { toast } = useToast();
-
-  const toggleRecipe = (recipeId: string) => {
-    setSelectedRecipes((prev) => {
-      const isSelected = prev.includes(recipeId);
-      if (isSelected) {
-        return prev.filter((id) => id !== recipeId);
-      } else {
-        const recipe = recipes.find((r) => r.id === recipeId);
-        toast({
-          title: "Recipe Added! ✨",
-          description: `${recipe?.name} has been saved to your weekly meal plan`,
-        });
-        return [...prev, recipeId];
-      }
-    });
+  const toggleFilter = (filter: string) => {
+    setSelectedFilters((prev) =>
+      prev.includes(filter)
+        ? prev.filter((f) => f !== filter)
+        : [...prev, filter],
+    );
   };
 
-  const dislikeRecipe = (recipeId: string) => {
-    setDislikedRecipes((prev) => {
-      if (prev.includes(recipeId)) {
-        return prev.filter((id) => id !== recipeId);
-      } else {
-        const recipe = recipes.find((r) => r.id === recipeId);
-        toast({
-          title: "Got it! 👍",
-          description: `We'll suggest fewer recipes like ${recipe?.name}`,
-        });
-        return [...prev, recipeId];
-      }
-    });
+  const dailyStats = {
+    calories: 1150,
+    protein: 75,
+    carbs: 105,
+    fat: 54,
   };
+
+  const meals = [
+    {
+      id: "breakfast",
+      name: "Hormone-Balance Smoothie Bowl",
+      type: "Breakfast",
+      time: "5 min",
+      calories: 320,
+      tags: ["hormone-support", "quick"],
+      image: "🥣",
+      color: "#C7F8C5",
+    },
+    {
+      id: "lunch",
+      name: "Mediterranean Quinoa Salad",
+      type: "Lunch",
+      time: "25 min",
+      calories: 450,
+      tags: ["batch-friendly", "fiber-rich"],
+      image: "🥗",
+      color: "#C7F8C5",
+    },
+    {
+      id: "dinner",
+      name: "Herb-Crusted Salmon",
+      type: "Dinner",
+      time: "20 min",
+      calories: 380,
+      tags: ["hormone-support", "anti-inflammatory"],
+      image: "🐟",
+      color: "#C7F8C5",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-[#E0F1EB]">
@@ -203,7 +161,10 @@ export default function MealPrepBlueprint() {
             Dashboard
           </Link>
 
-          <button className="flex items-center gap-2 bg-[#1D2F29] text-white px-4 py-2 rounded-full text-sm font-medium">
+          <Link
+            to="/select-recipes"
+            className="group flex items-center gap-2 bg-white text-[#1D2F29] px-4 py-2 rounded-full text-sm font-medium border border-gray-200 hover:bg-[#4FA587] hover:text-white transition-colors"
+          >
             <svg
               width="15"
               height="15"
@@ -213,11 +174,12 @@ export default function MealPrepBlueprint() {
             >
               <path
                 d="M0.458252 5.49992C0.458252 4.80478 0.590023 4.15165 0.853564 3.54054C1.11711 2.92943 1.47804 2.39471 1.93638 1.93638C2.39471 1.47804 2.92943 1.11711 3.54054 0.853564C4.15165 0.590023 4.80478 0.458252 5.49992 0.458252C5.94297 0.458252 6.36693 0.511724 6.77179 0.618669C7.17665 0.725613 7.56242 0.878391 7.92908 1.077C8.17353 1.01589 8.43516 0.973877 8.71398 0.95096C8.9928 0.928044 9.29644 0.916585 9.62492 0.916585C9.62492 1.20686 9.61537 1.47995 9.59627 1.73586C9.57717 1.99176 9.54853 2.23047 9.51033 2.452C9.83117 2.87978 10.0833 3.35148 10.2666 3.86711C10.4499 4.38273 10.5416 4.927 10.5416 5.49992C10.5416 6.19506 10.4098 6.84818 10.1463 7.45929C9.88273 8.0704 9.52179 8.60513 9.06346 9.06346C8.60513 9.52179 8.0704 9.88273 7.45929 10.1463C6.84818 10.4098 6.19506 10.5416 5.49992 10.5416C4.80478 10.5416 4.15165 10.4098 3.54054 10.1463C2.92943 9.88273 2.39471 9.52179 1.93638 9.06346C1.47804 8.60513 1.11711 8.0704 0.853564 7.45929C0.590023 6.84818 0.458252 6.19506 0.458252 5.49992ZM3.21971 5.49992C3.21971 5.6145 3.23881 5.72908 3.277 5.84367C3.3152 5.95825 3.36867 6.0652 3.43742 6.1645L4.58325 7.76867L5.72908 6.1645C5.79783 6.0652 5.85131 5.95825 5.8895 5.84367C5.9277 5.72908 5.94679 5.6145 5.94679 5.49992C5.94679 5.3777 5.9277 5.2612 5.8895 5.15044C5.85131 5.03967 5.79783 4.93464 5.72908 4.83533L4.58325 3.21971L3.43742 4.83533C3.36867 4.93464 3.3152 5.04158 3.277 5.15617C3.23881 5.27075 3.21971 5.38533 3.21971 5.49992ZM1.37492 5.49992C1.37492 6.64575 1.77596 7.61971 2.57804 8.42179C3.38013 9.22388 4.35408 9.62492 5.49992 9.62492C6.64575 9.62492 7.61971 9.22388 8.42179 8.42179C9.22388 7.61971 9.62492 6.64575 9.62492 5.49992C9.62492 5.15617 9.5829 4.82388 9.49888 4.50304C9.41485 4.18221 9.29644 3.87665 9.14367 3.58638C9.08256 3.69332 9.01954 3.79263 8.95461 3.88429C8.88967 3.97596 8.8152 4.06381 8.73117 4.14783C8.62422 4.25478 8.51155 4.34836 8.39315 4.42856C8.27474 4.50877 8.14297 4.57943 7.99783 4.64054C8.21936 4.83152 8.39315 5.05877 8.51919 5.32231C8.64523 5.58586 8.70825 5.87422 8.70825 6.18742C8.70825 6.76033 8.50964 7.24731 8.11242 7.64836C7.7152 8.0494 7.23013 8.24992 6.65721 8.24992C6.4586 8.24992 6.26954 8.22318 6.09002 8.16971C5.91051 8.11624 5.74436 8.04367 5.59158 7.952L5.31658 8.33013C5.23256 8.44471 5.12561 8.53638 4.99575 8.60513C4.86589 8.67388 4.72839 8.70825 4.58325 8.70825C4.43811 8.70825 4.30252 8.67388 4.17648 8.60513C4.05044 8.53638 3.9454 8.44471 3.86138 8.33013L2.69263 6.69158C2.56277 6.51589 2.46728 6.32683 2.40617 6.1244C2.34506 5.92197 2.3145 5.71381 2.3145 5.49992C2.3145 5.28603 2.34506 5.07596 2.40617 4.86971C2.46728 4.66346 2.56277 4.47249 2.69263 4.29679L3.86138 2.65825C3.9454 2.54367 4.05044 2.45391 4.17648 2.38898C4.30252 2.32405 4.43811 2.29158 4.58325 2.29158C4.72839 2.29158 4.86589 2.32405 4.99575 2.38898C5.12561 2.45391 5.23256 2.54367 5.31658 2.65825L5.69471 3.19679C5.75582 2.97527 5.83221 2.7652 5.92388 2.56659C6.01554 2.36797 6.13395 2.18464 6.27908 2.01659C6.34783 1.93256 6.42231 1.85235 6.50252 1.77596C6.58273 1.69957 6.66867 1.63082 6.76033 1.56971C6.56172 1.5086 6.35738 1.46086 6.14731 1.42648C5.93724 1.39211 5.72145 1.37492 5.49992 1.37492C4.35408 1.37492 3.38013 1.77596 2.57804 2.57804C1.77596 3.38013 1.37492 4.35408 1.37492 5.49992ZM6.48533 6.69158L6.11867 7.20721C6.2027 7.2454 6.28672 7.27596 6.37075 7.29888C6.45478 7.32179 6.54645 7.33325 6.64575 7.33325C6.96658 7.33325 7.23776 7.22249 7.45929 7.00096C7.68082 6.77943 7.79158 6.50825 7.79158 6.18742C7.79158 5.89714 7.69801 5.64697 7.51086 5.4369C7.3237 5.22683 7.09263 5.1027 6.81763 5.0645C6.8329 5.14089 6.84436 5.21346 6.852 5.28221C6.85964 5.35096 6.86346 5.42353 6.86346 5.49992C6.86346 5.71381 6.8329 5.92197 6.77179 6.1244C6.71068 6.32683 6.6152 6.51589 6.48533 6.69158ZM8.71971 1.85617C8.36068 1.89436 8.04749 1.96311 7.78013 2.06242C7.51276 2.16172 7.28742 2.30304 7.10408 2.48638C6.92075 2.66971 6.7737 2.89506 6.66294 3.16242C6.55217 3.42978 6.4777 3.75443 6.4395 4.13638C6.80617 4.09818 7.12318 4.02752 7.39054 3.9244C7.6579 3.82127 7.88325 3.67804 8.06658 3.49471C8.24992 3.31138 8.39506 3.08412 8.502 2.81294C8.60894 2.54176 8.68151 2.22284 8.71971 1.85617ZM4.11346 6.59992C4.04471 6.53117 4.01033 6.44905 4.01033 6.35356C4.01033 6.25808 4.04471 6.17596 4.11346 6.10721L4.42283 5.79783L4.02179 5.477C3.93777 5.41589 3.89575 5.33377 3.89575 5.23065C3.89575 5.12752 3.93013 5.04158 3.99888 4.97283L4.57179 4.39992C4.64054 4.33117 4.72075 4.29679 4.81242 4.29679C4.90408 4.29679 4.98429 4.33117 5.05304 4.39992C5.12179 4.46867 5.15617 4.54888 5.15617 4.64054C5.15617 4.73221 5.12179 4.81242 5.05304 4.88117L4.74367 5.19054L5.14471 5.52283C5.22874 5.58395 5.27075 5.66606 5.27075 5.76919C5.27075 5.87231 5.23638 5.95825 5.16763 6.027L4.59471 6.59992C4.52596 6.66867 4.44575 6.70304 4.35408 6.70304C4.26242 6.70304 4.18221 6.66867 4.11346 6.59992Z"
-                fill="white"
+                fill="#1D2F29"
+                className="group-hover:fill-white transition-colors"
               />
             </svg>
             Select Recipes
-          </button>
+          </Link>
 
           <Link
             to="/meal-prep-blueprint"
@@ -239,10 +201,7 @@ export default function MealPrepBlueprint() {
             Meal Prep Blueprint
           </Link>
 
-          <Link
-            to="/view-meal-plan"
-            className="group flex items-center gap-2 bg-white text-[#1D2F29] px-4 py-2 rounded-full text-sm font-medium border border-gray-200 hover:bg-[#4FA587] hover:text-white transition-colors"
-          >
+          <button className="flex items-center gap-2 bg-[#1D2F29] text-white px-4 py-2 rounded-full text-sm font-medium">
             <svg
               width="19"
               height="19"
@@ -252,136 +211,176 @@ export default function MealPrepBlueprint() {
             >
               <path
                 d="M13.3 19C11.7167 19 10.3708 18.4458 9.2625 17.3375C8.15417 16.2292 7.6 14.8833 7.6 13.3C7.6 11.7167 8.15417 10.3708 9.2625 9.2625C10.3708 8.15417 11.7167 7.6 13.3 7.6C14.8833 7.6 16.2292 8.15417 17.3375 9.2625C18.4458 10.3708 19 11.7167 19 13.3C19 14.8833 18.4458 16.2292 17.3375 17.3375C16.2292 18.4458 14.8833 19 13.3 19ZM13.3 17.1C14.345 17.1 15.2396 16.7279 15.9837 15.9837C16.7279 15.2396 17.1 14.345 17.1 13.3C17.1 12.255 16.7279 11.3604 15.9837 10.6163C15.2396 9.87208 14.345 9.5 13.3 9.5C12.255 9.5 11.3604 9.87208 10.6163 10.6163C9.87208 11.3604 9.5 12.255 9.5 13.3C9.5 14.345 9.87208 15.2396 10.6163 15.9837C11.3604 16.7279 12.255 17.1 13.3 17.1ZM1.9 17.1C1.3775 17.1 0.930208 16.914 0.558125 16.5419C0.186042 16.1698 0 15.7225 0 15.2V7.98C0 7.85333 0.011875 7.72667 0.035625 7.6C0.059375 7.47333 0.095 7.34667 0.1425 7.22L2.0425 2.85H1.9C1.63083 2.85 1.40521 2.75896 1.22312 2.57687C1.04104 2.39479 0.95 2.16917 0.95 1.9V0.95C0.95 0.680833 1.04104 0.455208 1.22312 0.273125C1.40521 0.0910417 1.63083 0 1.9 0H8.55C8.81917 0 9.04479 0.0910417 9.22688 0.273125C9.40896 0.455208 9.5 0.680833 9.5 0.95V1.9C9.5 2.16917 9.40896 2.39479 9.22688 2.57687C9.04479 2.75896 8.81917 2.85 8.55 2.85H8.4075L9.975 6.46C9.67417 6.61833 9.38917 6.78458 9.12 6.95875C8.85083 7.13292 8.5975 7.33083 8.36 7.5525L6.365 2.85H4.085L1.9 7.98V15.2H5.9375C6.01667 15.5325 6.12354 15.861 6.25812 16.1856C6.39271 16.5102 6.555 16.815 6.745 17.1H1.9ZM13.3 6.65C12.635 6.65 12.0729 6.42042 11.6137 5.96125C11.1546 5.50208 10.925 4.94 10.925 4.275C10.925 3.61 11.1546 3.04792 11.6137 2.58875C12.0729 2.12958 12.635 1.9 13.3 1.9V6.65C13.3 5.985 13.5296 5.42292 13.9887 4.96375C14.4479 4.50458 15.01 4.275 15.675 4.275C16.34 4.275 16.9021 4.50458 17.3612 4.96375C17.8204 5.42292 18.05 5.985 18.05 6.65H13.3Z"
-                fill="#1D2F29"
-                className="group-hover:fill-white transition-colors"
+                fill="white"
               />
             </svg>
             View Meal Plan
-          </Link>
+          </button>
         </div>
 
-        {/* Recipe Grid */}
-        <div className="bg-white rounded-lg border border-[#1D2F29] shadow-sm">
-          <div className="bg-[#1D2F29] text-white p-6 rounded-t-lg">
-            <h2 className="text-2xl font-bold text-center mb-2 font-display">
-              These recipes were handpicked with you in mind
+        {/* Filters Section */}
+        <div className="bg-white rounded-lg border border-[#4FA587] shadow-sm mb-6 p-6">
+          <div className="flex items-center gap-3 mb-4">
+            <svg
+              className="w-5 h-5 text-[#4FA587]"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z" />
+            </svg>
+            <h2 className="text-lg font-semibold text-[#1D2F29] font-display">
+              Filters
             </h2>
-            <p className="text-center text-base opacity-90">
-              Personalized meal prep to match your goals and taste.
-            </p>
           </div>
+          <div className="flex flex-wrap gap-3">
+            {filters.map((filter) => (
+              <button
+                key={filter}
+                onClick={() => toggleFilter(filter)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${
+                  selectedFilters.includes(filter)
+                    ? "bg-[#4FA587] text-white border-[#4FA587]"
+                    : "bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200"
+                }`}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
+        </div>
 
-          <div className="p-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {recipes.map((recipe) => (
-                <div
-                  key={recipe.id}
-                  className="bg-white rounded-md border border-[#4FA587] overflow-hidden group hover:shadow-md transition-shadow"
-                >
-                  {/* Recipe Image */}
-                  <div className="h-[185px] relative overflow-hidden">
-                    <img
-                      src={recipe.image}
-                      alt={recipe.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-
-                  {/* Recipe Content */}
-                  <div className="p-5 border-t border-[#D9D9D9] bg-[#FBFBFB] relative">
-                    <h3 className="text-base font-semibold text-[#1D2F29] mb-3">
-                      {recipe.name}
-                    </h3>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {recipe.tags.map((tag, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1 rounded-full text-xs"
-                          style={{
-                            backgroundColor: tag.color,
-                            color: tag.textColor || "#1D2F29",
-                          }}
-                        >
-                          {tag.label}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* Action Buttons */}
-                    <div className="absolute bottom-5 right-5 flex gap-2">
-                      {/* Thumbs Down Button */}
-                      <button
-                        onClick={() => dislikeRecipe(recipe.id)}
-                        className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
-                          dislikedRecipes.includes(recipe.id)
-                            ? "bg-[#E95929] hover:bg-[#d44a1e]"
-                            : "bg-gray-300 hover:bg-gray-400"
-                        }`}
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="24px"
-                          viewBox="0 -960 960 960"
-                          width="24px"
-                          fill={
-                            dislikedRecipes.includes(recipe.id)
-                              ? "white"
-                              : "#5f6368"
-                          }
-                        >
-                          <path d="M120-320q-32 0-56-24t-24-56v-80q0-7 2-15t4-15l120-282q9-20 30-34t44-14h440v520L440-82q-15 15-35.5 17.5T365-72q-19-10-28-28t-4-37l45-183H120Zm480-34v-406H240L120-480v80h360l-54 220 174-174Zm200-486q33 0 56.5 23.5T880-760v360q0 33-23.5 56.5T800-320H680v-80h120v-360H680v-80h120Zm-200 80v406-406Z" />
-                        </svg>
-                      </button>
-
-                      {/* Add/Selected Button */}
-                      <button
-                        onClick={() => toggleRecipe(recipe.id)}
-                        className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
-                          selectedRecipes.includes(recipe.id)
-                            ? "bg-[#4FA587] hover:bg-[#3F8F77]"
-                            : "bg-[#1D2F29] hover:bg-[#2a3f39]"
-                        }`}
-                      >
-                        {selectedRecipes.includes(recipe.id) ? (
-                          <svg
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                          >
-                            <path
-                              d="M20 6L9 17L4 12"
-                              stroke="white"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        ) : (
-                          <svg
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                          >
-                            <path
-                              d="M12 5V19M5 12H19"
-                              stroke="white"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        )}
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
+        {/* Daily Stats */}
+        <div className="bg-gradient-to-r from-[#C7F8C5] to-[#BDDFD3] rounded-lg border border-[#4FA587] shadow-sm mb-6 p-6">
+          <div className="grid grid-cols-4 gap-6 text-center">
+            <div>
+              <div className="text-3xl font-bold text-[#1D2F29] mb-1">
+                {dailyStats.calories}
+              </div>
+              <div className="text-sm text-gray-700">Calories</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-[#4FA587] mb-1">
+                {dailyStats.protein}g
+              </div>
+              <div className="text-sm text-gray-700">Protein</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-[#3F8F77] mb-1">
+                {dailyStats.carbs}g
+              </div>
+              <div className="text-sm text-gray-700">Carbs</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-[#E95929] mb-1">
+                {dailyStats.fat}g
+              </div>
+              <div className="text-sm text-gray-700">Fat</div>
             </div>
           </div>
+        </div>
+
+        {/* Meals List */}
+        <div className="space-y-4 mb-6">
+          {meals.map((meal) => (
+            <div
+              key={meal.id}
+              className="bg-white rounded-lg border border-[#4FA587] shadow-sm p-4"
+            >
+              <div className="flex items-center gap-4">
+                <div
+                  className="w-16 h-16 rounded-lg flex items-center justify-center text-2xl"
+                  style={{ backgroundColor: meal.color }}
+                >
+                  {meal.image}
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-[#1D2F29] mb-1 font-display">
+                    {meal.name}
+                  </h3>
+                  <div className="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                    <span>{meal.type}</span>
+                    <span>•</span>
+                    <span>{meal.time}</span>
+                  </div>
+                  <div className="text-sm font-medium text-[#1D2F29] mb-2">
+                    {meal.calories} cal
+                  </div>
+                  <div className="flex gap-2">
+                    {meal.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <button className="w-8 h-8 rounded-full border-2 border-[#4FA587] flex items-center justify-center hover:bg-[#4FA587] hover:text-white transition-colors">
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Smart Suggestion */}
+        <div className="bg-gradient-to-r from-[#E6F7FF] to-[#F0F9FF] rounded-lg border border-[#4FA587] shadow-sm mb-6 p-4">
+          <div className="flex items-start gap-3">
+            <div className="w-8 h-8 bg-[#4FA587] rounded-full flex items-center justify-center flex-shrink-0">
+              <svg
+                className="w-4 h-4 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <h3 className="font-semibold text-[#1D2F29] mb-1 font-display">
+                Smart Suggestion
+              </h3>
+              <p className="text-sm text-gray-700">
+                Swapping to the anti-inflammatory bowl would boost your omega-3s
+                by 40% today!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="space-y-3">
+          <button className="w-full bg-[#4FA587] hover:bg-[#3F8F77] text-white font-semibold py-4 px-6 rounded-lg transition-colors">
+            Save This Day
+          </button>
+          <button className="w-full bg-white border-2 border-[#4FA587] text-[#4FA587] hover:bg-[#4FA587] hover:text-white font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5H21M9 19.5h.01M20 19.5h.01"
+              />
+            </svg>
+            Generate Grocery List
+          </button>
         </div>
       </div>
     </div>

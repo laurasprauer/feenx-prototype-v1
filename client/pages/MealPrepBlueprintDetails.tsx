@@ -1,106 +1,72 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 
-interface Recipe {
-  id: string;
-  name: string;
-  image: string;
-  tags: Tag[];
-}
-
-interface Tag {
-  label: string;
-  color: string;
-  textColor?: string;
-}
-
-const recipes: Recipe[] = [
-  {
-    id: "sunlit-beet",
-    name: "Sunlit Beet & Garden Herb Bowl",
+export default function MealPrepBlueprintDetails() {
+  const recipe = {
+    name: "Mediterranean Power Bowl",
     image:
       "https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2Fe06596e18f9b4dd0870bf0d7497b07da?format=webp&width=800",
-    tags: [
-      { label: "Low-prep", color: "#BDDFD3" },
-      { label: "Hormone balance", color: "#8FE9BC" },
-      { label: "Anti-inflammatory", color: "#E95929", textColor: "#FFF" },
-    ],
-  },
-  {
-    id: "avocado-crunch",
-    name: "Avocado Crunch Salad",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2Fd993e97fea8f439b93205adaf579acdd?format=webp&width=800",
-    tags: [
-      { label: "Low-prep", color: "#BDDFD3" },
-      { label: "Leftovers welcome", color: "#D7CFBA" },
-      { label: "Energy boost", color: "#C7F8C5" },
-      { label: "Heart healthy", color: "#FFE4D6" },
-    ],
-  },
-  {
-    id: "overnight-oats",
-    name: "Overnight Oats",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F072b71aa7c9042518935cf6a26eb0d4e?format=webp&width=800",
-    tags: [
-      { label: "Energy boost", color: "#C7F8C5" },
-      { label: "Anti-inflammatory", color: "#E95929", textColor: "#FFF" },
-      { label: "Leftovers welcome", color: "#D7CFBA" },
-    ],
-  },
-  {
-    id: "chicken-avocado",
-    name: "Chicken & Avocado Power Bowl",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F1db30bb9a3604841b00e870a429521e0?format=webp&width=800",
-    tags: [
-      { label: "High protein", color: "#3D7086", textColor: "#FFF" },
-      { label: "Energy boost", color: "#C7F8C5" },
-      { label: "Low-prep", color: "#BDDFD3" },
-      { label: "Anti-inflammatory", color: "#E95929", textColor: "#FFF" },
-    ],
-  },
-];
-
-export default function MealPrepBlueprint() {
-  const [selectedRecipes, setSelectedRecipes] = useState<string[]>([]);
-  const [dislikedRecipes, setDislikedRecipes] = useState<string[]>([]);
-  const { toast } = useToast();
-
-  const toggleRecipe = (recipeId: string) => {
-    setSelectedRecipes((prev) => {
-      const isSelected = prev.includes(recipeId);
-      if (isSelected) {
-        return prev.filter((id) => id !== recipeId);
-      } else {
-        const recipe = recipes.find((r) => r.id === recipeId);
-        toast({
-          title: "Recipe Added! ✨",
-          description: `${recipe?.name} has been saved to your weekly meal plan`,
-        });
-        return [...prev, recipeId];
-      }
-    });
+    description:
+      "A nutrient-dense bowl featuring roasted vegetables, quinoa, grilled chicken, and tahini dressing",
+    stats: {
+      totalTime: "1.5h",
+      mealsPrepped: 16,
+      daysCovered: 4,
+      servings: 4,
+      calories: 485,
+      protein: 32,
+      carbs: 42,
+      fat: 18,
+    },
   };
 
-  const dislikeRecipe = (recipeId: string) => {
-    setDislikedRecipes((prev) => {
-      if (prev.includes(recipeId)) {
-        return prev.filter((id) => id !== recipeId);
-      } else {
-        const recipe = recipes.find((r) => r.id === recipeId);
-        toast({
-          title: "Got it! 👍",
-          description: `We'll suggest fewer recipes like ${recipe?.name}`,
-        });
-        return [...prev, recipeId];
-      }
-    });
-  };
+  const tools = [
+    "Large sheet pans (2)",
+    "Rice cooker",
+    "Sharp chef knife",
+    "Labels & marker",
+    "Glass meal prep containers",
+    "High-speed blender",
+    "Cutting boards (2)",
+  ];
+
+  const prepSteps = [
+    {
+      step: 1,
+      title: "Prep roasted vegetables",
+      description: "Chop and roast sweet potatoes, broccoli, bell peppers",
+      time: "20 min",
+      color: "#4FA587",
+    },
+    {
+      step: 2,
+      title: "Cook protein batch",
+      description: "Season and cook chicken breast and salmon portions",
+      time: "15 min",
+      color: "#4FA587",
+    },
+    {
+      step: 3,
+      title: "Prepare grain base",
+      description: "Cook quinoa and brown rice in rice cooker",
+      time: "25 min",
+      color: "#4FA587",
+    },
+    {
+      step: 4,
+      title: "Make sauce & dressings",
+      description: "Blend tahini dressing and herb sauce",
+      time: "10 min",
+      color: "#4FA587",
+    },
+    {
+      step: 5,
+      title: "Portion & store",
+      description: "Divide into glass containers, label with dates",
+      time: "15 min",
+      color: "#4FA587",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-[#E0F1EB]">
@@ -203,7 +169,10 @@ export default function MealPrepBlueprint() {
             Dashboard
           </Link>
 
-          <button className="flex items-center gap-2 bg-[#1D2F29] text-white px-4 py-2 rounded-full text-sm font-medium">
+          <Link
+            to="/select-recipes"
+            className="group flex items-center gap-2 bg-white text-[#1D2F29] px-4 py-2 rounded-full text-sm font-medium border border-gray-200 hover:bg-[#4FA587] hover:text-white transition-colors"
+          >
             <svg
               width="15"
               height="15"
@@ -213,16 +182,14 @@ export default function MealPrepBlueprint() {
             >
               <path
                 d="M0.458252 5.49992C0.458252 4.80478 0.590023 4.15165 0.853564 3.54054C1.11711 2.92943 1.47804 2.39471 1.93638 1.93638C2.39471 1.47804 2.92943 1.11711 3.54054 0.853564C4.15165 0.590023 4.80478 0.458252 5.49992 0.458252C5.94297 0.458252 6.36693 0.511724 6.77179 0.618669C7.17665 0.725613 7.56242 0.878391 7.92908 1.077C8.17353 1.01589 8.43516 0.973877 8.71398 0.95096C8.9928 0.928044 9.29644 0.916585 9.62492 0.916585C9.62492 1.20686 9.61537 1.47995 9.59627 1.73586C9.57717 1.99176 9.54853 2.23047 9.51033 2.452C9.83117 2.87978 10.0833 3.35148 10.2666 3.86711C10.4499 4.38273 10.5416 4.927 10.5416 5.49992C10.5416 6.19506 10.4098 6.84818 10.1463 7.45929C9.88273 8.0704 9.52179 8.60513 9.06346 9.06346C8.60513 9.52179 8.0704 9.88273 7.45929 10.1463C6.84818 10.4098 6.19506 10.5416 5.49992 10.5416C4.80478 10.5416 4.15165 10.4098 3.54054 10.1463C2.92943 9.88273 2.39471 9.52179 1.93638 9.06346C1.47804 8.60513 1.11711 8.0704 0.853564 7.45929C0.590023 6.84818 0.458252 6.19506 0.458252 5.49992ZM3.21971 5.49992C3.21971 5.6145 3.23881 5.72908 3.277 5.84367C3.3152 5.95825 3.36867 6.0652 3.43742 6.1645L4.58325 7.76867L5.72908 6.1645C5.79783 6.0652 5.85131 5.95825 5.8895 5.84367C5.9277 5.72908 5.94679 5.6145 5.94679 5.49992C5.94679 5.3777 5.9277 5.2612 5.8895 5.15044C5.85131 5.03967 5.79783 4.93464 5.72908 4.83533L4.58325 3.21971L3.43742 4.83533C3.36867 4.93464 3.3152 5.04158 3.277 5.15617C3.23881 5.27075 3.21971 5.38533 3.21971 5.49992ZM1.37492 5.49992C1.37492 6.64575 1.77596 7.61971 2.57804 8.42179C3.38013 9.22388 4.35408 9.62492 5.49992 9.62492C6.64575 9.62492 7.61971 9.22388 8.42179 8.42179C9.22388 7.61971 9.62492 6.64575 9.62492 5.49992C9.62492 5.15617 9.5829 4.82388 9.49888 4.50304C9.41485 4.18221 9.29644 3.87665 9.14367 3.58638C9.08256 3.69332 9.01954 3.79263 8.95461 3.88429C8.88967 3.97596 8.8152 4.06381 8.73117 4.14783C8.62422 4.25478 8.51155 4.34836 8.39315 4.42856C8.27474 4.50877 8.14297 4.57943 7.99783 4.64054C8.21936 4.83152 8.39315 5.05877 8.51919 5.32231C8.64523 5.58586 8.70825 5.87422 8.70825 6.18742C8.70825 6.76033 8.50964 7.24731 8.11242 7.64836C7.7152 8.0494 7.23013 8.24992 6.65721 8.24992C6.4586 8.24992 6.26954 8.22318 6.09002 8.16971C5.91051 8.11624 5.74436 8.04367 5.59158 7.952L5.31658 8.33013C5.23256 8.44471 5.12561 8.53638 4.99575 8.60513C4.86589 8.67388 4.72839 8.70825 4.58325 8.70825C4.43811 8.70825 4.30252 8.67388 4.17648 8.60513C4.05044 8.53638 3.9454 8.44471 3.86138 8.33013L2.69263 6.69158C2.56277 6.51589 2.46728 6.32683 2.40617 6.1244C2.34506 5.92197 2.3145 5.71381 2.3145 5.49992C2.3145 5.28603 2.34506 5.07596 2.40617 4.86971C2.46728 4.66346 2.56277 4.47249 2.69263 4.29679L3.86138 2.65825C3.9454 2.54367 4.05044 2.45391 4.17648 2.38898C4.30252 2.32405 4.43811 2.29158 4.58325 2.29158C4.72839 2.29158 4.86589 2.32405 4.99575 2.38898C5.12561 2.45391 5.23256 2.54367 5.31658 2.65825L5.69471 3.19679C5.75582 2.97527 5.83221 2.7652 5.92388 2.56659C6.01554 2.36797 6.13395 2.18464 6.27908 2.01659C6.34783 1.93256 6.42231 1.85235 6.50252 1.77596C6.58273 1.69957 6.66867 1.63082 6.76033 1.56971C6.56172 1.5086 6.35738 1.46086 6.14731 1.42648C5.93724 1.39211 5.72145 1.37492 5.49992 1.37492C4.35408 1.37492 3.38013 1.77596 2.57804 2.57804C1.77596 3.38013 1.37492 4.35408 1.37492 5.49992ZM6.48533 6.69158L6.11867 7.20721C6.2027 7.2454 6.28672 7.27596 6.37075 7.29888C6.45478 7.32179 6.54645 7.33325 6.64575 7.33325C6.96658 7.33325 7.23776 7.22249 7.45929 7.00096C7.68082 6.77943 7.79158 6.50825 7.79158 6.18742C7.79158 5.89714 7.69801 5.64697 7.51086 5.4369C7.3237 5.22683 7.09263 5.1027 6.81763 5.0645C6.8329 5.14089 6.84436 5.21346 6.852 5.28221C6.85964 5.35096 6.86346 5.42353 6.86346 5.49992C6.86346 5.71381 6.8329 5.92197 6.77179 6.1244C6.71068 6.32683 6.6152 6.51589 6.48533 6.69158ZM8.71971 1.85617C8.36068 1.89436 8.04749 1.96311 7.78013 2.06242C7.51276 2.16172 7.28742 2.30304 7.10408 2.48638C6.92075 2.66971 6.7737 2.89506 6.66294 3.16242C6.55217 3.42978 6.4777 3.75443 6.4395 4.13638C6.80617 4.09818 7.12318 4.02752 7.39054 3.9244C7.6579 3.82127 7.88325 3.67804 8.06658 3.49471C8.24992 3.31138 8.39506 3.08412 8.502 2.81294C8.60894 2.54176 8.68151 2.22284 8.71971 1.85617ZM4.11346 6.59992C4.04471 6.53117 4.01033 6.44905 4.01033 6.35356C4.01033 6.25808 4.04471 6.17596 4.11346 6.10721L4.42283 5.79783L4.02179 5.477C3.93777 5.41589 3.89575 5.33377 3.89575 5.23065C3.89575 5.12752 3.93013 5.04158 3.99888 4.97283L4.57179 4.39992C4.64054 4.33117 4.72075 4.29679 4.81242 4.29679C4.90408 4.29679 4.98429 4.33117 5.05304 4.39992C5.12179 4.46867 5.15617 4.54888 5.15617 4.64054C5.15617 4.73221 5.12179 4.81242 5.05304 4.88117L4.74367 5.19054L5.14471 5.52283C5.22874 5.58395 5.27075 5.66606 5.27075 5.76919C5.27075 5.87231 5.23638 5.95825 5.16763 6.027L4.59471 6.59992C4.52596 6.66867 4.44575 6.70304 4.35408 6.70304C4.26242 6.70304 4.18221 6.66867 4.11346 6.59992Z"
-                fill="white"
+                fill="#1D2F29"
+                className="group-hover:fill-white transition-colors"
               />
             </svg>
             Select Recipes
-          </button>
+          </Link>
 
-          <Link
-            to="/meal-prep-blueprint"
-            className="group flex items-center gap-2 bg-white text-[#1D2F29] px-4 py-2 rounded-full text-sm font-medium border border-gray-200 hover:bg-[#4FA587] hover:text-white transition-colors"
-          >
+          <button className="flex items-center gap-2 bg-[#1D2F29] text-white px-4 py-2 rounded-full text-sm font-medium">
             <svg
               width="17"
               height="19"
@@ -232,12 +199,11 @@ export default function MealPrepBlueprint() {
             >
               <path
                 d="M1.88889 19C1.36944 19 0.924769 18.814 0.554861 18.4419C0.184954 18.0698 0 17.6225 0 17.1V3.8C0 3.2775 0.184954 2.83021 0.554861 2.45812C0.924769 2.08604 1.36944 1.9 1.88889 1.9H2.83333V0.95C2.83333 0.680833 2.92384 0.455208 3.10486 0.273125C3.28588 0.0910417 3.51019 0 3.77778 0C4.04537 0 4.26968 0.0910417 4.45069 0.273125C4.63171 0.455208 4.72222 0.680833 4.72222 0.95V1.9H12.2778V0.95C12.2778 0.680833 12.3683 0.455208 12.5493 0.273125C12.7303 0.0910417 12.9546 0 13.2222 0C13.4898 0 13.7141 0.0910417 13.8951 0.273125C14.0762 0.455208 14.1667 0.680833 14.1667 0.95V1.9H15.1111C15.6306 1.9 16.0752 2.08604 16.4451 2.45812C16.815 2.83021 17 3.2775 17 3.8V17.1C17 17.6225 16.815 18.0698 16.4451 18.4419C16.0752 18.814 15.6306 19 15.1111 19H1.88889ZM15.1111 17.1V3.8H1.88889V17.1H15.1111ZM5.19444 9.28625V6.175C5.19444 6.04833 5.14722 5.9375 5.05278 5.8425C4.95833 5.7475 4.84815 5.7 4.72222 5.7C4.5963 5.7 4.48611 5.7475 4.39167 5.8425C4.29722 5.9375 4.25 6.04833 4.25 6.175V9.57125C4.25 9.99875 4.3838 10.3827 4.65139 10.7231C4.91898 11.0635 5.25741 11.2892 5.66667 11.4V14.4875C5.66667 14.6933 5.73356 14.8635 5.86736 14.9981C6.00116 15.1327 6.17037 15.2 6.375 15.2C6.57963 15.2 6.74884 15.1327 6.88264 14.9981C7.01644 14.8635 7.08333 14.6933 7.08333 14.4875V11.4C7.49259 11.2892 7.83102 11.0635 8.09861 10.7231C8.3662 10.3827 8.5 9.99875 8.5 9.57125V6.175C8.5 6.04833 8.45278 5.9375 8.35833 5.8425C8.26389 5.7475 8.1537 5.7 8.02778 5.7C7.90185 5.7 7.79167 5.7475 7.69722 5.8425C7.60278 5.9375 7.55556 6.04833 7.55556 6.175V9.28625H6.84722V6.175C6.84722 6.04833 6.8 5.9375 6.70556 5.8425C6.61111 5.7475 6.50093 5.7 6.375 5.7C6.24907 5.7 6.13889 5.7475 6.04444 5.8425C5.95 5.9375 5.90278 6.04833 5.90278 6.175V9.28625H5.19444ZM11.3333 11.4V14.4875C11.3333 14.6933 11.4002 14.8635 11.534 14.9981C11.6678 15.1327 11.837 15.2 12.0417 15.2C12.2463 15.2 12.4155 15.1327 12.5493 14.9981C12.6831 14.8635 12.75 14.6933 12.75 14.4875V6.24625C12.75 6.07208 12.691 5.9375 12.5729 5.8425C12.4549 5.7475 12.3014 5.7 12.1125 5.7C11.9079 5.7 11.6836 5.75542 11.4396 5.86625C11.1956 5.97708 10.9634 6.14333 10.7431 6.365C10.4755 6.63417 10.2708 6.93896 10.1292 7.27938C9.9875 7.61979 9.91667 7.98792 9.91667 8.38375V10.45C9.91667 10.7192 10.0072 10.9448 10.1882 11.1269C10.3692 11.309 10.5935 11.4 10.8611 11.4H11.3333Z"
-                fill="#1D2F29"
-                className="group-hover:fill-white transition-colors"
+                fill="white"
               />
             </svg>
             Meal Prep Blueprint
-          </Link>
+          </button>
 
           <Link
             to="/view-meal-plan"
@@ -260,122 +226,148 @@ export default function MealPrepBlueprint() {
           </Link>
         </div>
 
-        {/* Recipe Grid */}
-        <div className="bg-white rounded-lg border border-[#1D2F29] shadow-sm">
-          <div className="bg-[#1D2F29] text-white p-6 rounded-t-lg">
-            <h2 className="text-2xl font-bold text-center mb-2 font-display">
-              These recipes were handpicked with you in mind
-            </h2>
-            <p className="text-center text-base opacity-90">
-              Personalized meal prep to match your goals and taste.
-            </p>
+        {/* Recipe Header */}
+        <div className="bg-white rounded-lg border border-[#4FA587] shadow-sm mb-6">
+          <div className="p-6">
+            <div className="flex gap-6">
+              <div className="w-32 h-32 rounded-lg overflow-hidden flex-shrink-0">
+                <img
+                  src={recipe.image}
+                  alt={recipe.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex-1">
+                <h1 className="text-2xl font-bold text-[#1D2F29] mb-2 font-display">
+                  {recipe.name}
+                </h1>
+                <p className="text-[#1D2F29] text-base mb-4">
+                  {recipe.description}
+                </p>
+
+                {/* Macros */}
+                <div className="grid grid-cols-4 gap-4">
+                  <div className="text-center">
+                    <div className="text-xl font-bold text-[#1D2F29]">
+                      {recipe.stats.calories}
+                    </div>
+                    <div className="text-sm text-gray-600">Calories</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-xl font-bold text-[#1D2F29]">
+                      {recipe.stats.protein}g
+                    </div>
+                    <div className="text-sm text-gray-600">Protein</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-xl font-bold text-[#1D2F29]">
+                      {recipe.stats.carbs}g
+                    </div>
+                    <div className="text-sm text-gray-600">Carbs</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-xl font-bold text-[#1D2F29]">
+                      {recipe.stats.fat}g
+                    </div>
+                    <div className="text-sm text-gray-600">Fat</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Stats Cards */}
+        <div className="grid grid-cols-3 gap-4 mb-6">
+          <div className="bg-white rounded-lg border border-[#4FA587] p-4 text-center">
+            <svg
+              className="w-8 h-8 mx-auto mb-2 text-[#4FA587]"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-.5-13H10v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
+            </svg>
+            <div className="text-2xl font-bold text-[#1D2F29] mb-1">
+              {recipe.stats.totalTime}
+            </div>
+            <div className="text-sm text-gray-600">Total Time</div>
           </div>
 
-          <div className="p-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {recipes.map((recipe) => (
+          <div className="bg-white rounded-lg border border-[#4FA587] p-4 text-center">
+            <svg
+              className="w-8 h-8 mx-auto mb-2 text-[#E95929]"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <div className="text-2xl font-bold text-[#1D2F29] mb-1">
+              {recipe.stats.mealsPrepped}
+            </div>
+            <div className="text-sm text-gray-600">Meals Prepped</div>
+          </div>
+
+          <div className="bg-white rounded-lg border border-[#4FA587] p-4 text-center">
+            <svg
+              className="w-8 h-8 mx-auto mb-2 text-[#4FA587]"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z" />
+              <path d="M5 7h14v2H5z" />
+              <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM19 19H5V8h14v11z" />
+            </svg>
+            <div className="text-2xl font-bold text-[#1D2F29] mb-1">
+              {recipe.stats.daysCovered}
+            </div>
+            <div className="text-sm text-gray-600">Days Covered</div>
+          </div>
+        </div>
+
+        {/* Tools Section */}
+        <div className="bg-white rounded-lg border border-[#4FA587] shadow-sm mb-6">
+          <div className="p-6">
+            <h2 className="text-xl font-bold text-[#1D2F29] mb-4 font-display">
+              Tools You'll Need
+            </h2>
+            <div className="grid grid-cols-2 gap-3">
+              {tools.map((tool, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-[#4FA587] rounded-full"></div>
+                  <span className="text-[#1D2F29] text-sm">{tool}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Prep Order Section */}
+        <div className="bg-white rounded-lg border border-[#4FA587] shadow-sm">
+          <div className="p-6">
+            <h2 className="text-xl font-bold text-[#1D2F29] mb-6 font-display">
+              Prep Order
+            </h2>
+            <div className="space-y-4">
+              {prepSteps.map((step) => (
                 <div
-                  key={recipe.id}
-                  className="bg-white rounded-md border border-[#4FA587] overflow-hidden group hover:shadow-md transition-shadow"
+                  key={step.step}
+                  className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg"
                 >
-                  {/* Recipe Image */}
-                  <div className="h-[185px] relative overflow-hidden">
-                    <img
-                      src={recipe.image}
-                      alt={recipe.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                  <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold"
+                    style={{ backgroundColor: step.color }}
+                  >
+                    {step.step}
                   </div>
-
-                  {/* Recipe Content */}
-                  <div className="p-5 border-t border-[#D9D9D9] bg-[#FBFBFB] relative">
-                    <h3 className="text-base font-semibold text-[#1D2F29] mb-3">
-                      {recipe.name}
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-[#1D2F29] mb-1">
+                      {step.title}
                     </h3>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {recipe.tags.map((tag, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1 rounded-full text-xs"
-                          style={{
-                            backgroundColor: tag.color,
-                            color: tag.textColor || "#1D2F29",
-                          }}
-                        >
-                          {tag.label}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* Action Buttons */}
-                    <div className="absolute bottom-5 right-5 flex gap-2">
-                      {/* Thumbs Down Button */}
-                      <button
-                        onClick={() => dislikeRecipe(recipe.id)}
-                        className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
-                          dislikedRecipes.includes(recipe.id)
-                            ? "bg-[#E95929] hover:bg-[#d44a1e]"
-                            : "bg-gray-300 hover:bg-gray-400"
-                        }`}
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="24px"
-                          viewBox="0 -960 960 960"
-                          width="24px"
-                          fill={
-                            dislikedRecipes.includes(recipe.id)
-                              ? "white"
-                              : "#5f6368"
-                          }
-                        >
-                          <path d="M120-320q-32 0-56-24t-24-56v-80q0-7 2-15t4-15l120-282q9-20 30-34t44-14h440v520L440-82q-15 15-35.5 17.5T365-72q-19-10-28-28t-4-37l45-183H120Zm480-34v-406H240L120-480v80h360l-54 220 174-174Zm200-486q33 0 56.5 23.5T880-760v360q0 33-23.5 56.5T800-320H680v-80h120v-360H680v-80h120Zm-200 80v406-406Z" />
-                        </svg>
-                      </button>
-
-                      {/* Add/Selected Button */}
-                      <button
-                        onClick={() => toggleRecipe(recipe.id)}
-                        className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
-                          selectedRecipes.includes(recipe.id)
-                            ? "bg-[#4FA587] hover:bg-[#3F8F77]"
-                            : "bg-[#1D2F29] hover:bg-[#2a3f39]"
-                        }`}
-                      >
-                        {selectedRecipes.includes(recipe.id) ? (
-                          <svg
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                          >
-                            <path
-                              d="M20 6L9 17L4 12"
-                              stroke="white"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        ) : (
-                          <svg
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                          >
-                            <path
-                              d="M12 5V19M5 12H19"
-                              stroke="white"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        )}
-                      </button>
+                    <p className="text-sm text-gray-600">{step.description}</p>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-sm font-semibold text-[#E95929]">
+                      {step.time}
                     </div>
                   </div>
                 </div>

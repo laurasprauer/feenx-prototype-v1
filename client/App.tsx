@@ -13,6 +13,8 @@ import OnboardingStep3 from "./pages/OnboardingStep3";
 import OnboardingStep4 from "./pages/OnboardingStep4";
 import Dashboard from "./pages/Dashboard";
 import MealPrepBlueprint from "./pages/MealPrepBlueprint";
+import MealPrepBlueprintDetails from "./pages/MealPrepBlueprintDetails";
+import ViewMealPlan from "./pages/ViewMealPlan";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,7 +32,12 @@ const App = () => (
           <Route path="/onboarding/step3" element={<OnboardingStep3 />} />
           <Route path="/onboarding/step4" element={<OnboardingStep4 />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/meal-prep-blueprint" element={<MealPrepBlueprint />} />
+          <Route path="/select-recipes" element={<MealPrepBlueprint />} />
+          <Route
+            path="/meal-prep-blueprint"
+            element={<MealPrepBlueprintDetails />}
+          />
+          <Route path="/view-meal-plan" element={<ViewMealPlan />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -408,9 +408,14 @@ export default function Dashboard() {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-[#1D2F29] text-base">
-                      Meal Tracker
-                    </h3>
+                    <div className="flex justify-between items-center">
+                      <h3 className="font-semibold text-[#1D2F29] text-base">
+                        Meal Tracker
+                      </h3>
+                      <span className="text-xs bg-[#4FA587] text-white px-1 py-0.5 rounded">
+                        1/4
+                      </span>
+                    </div>
                     <p className="text-[#676767] text-sm">
                       One meal down, three to go.
                     </p>
@@ -428,9 +433,6 @@ export default function Dashboard() {
                           }}
                         ></div>
                       </div>
-                      <span className="text-xs bg-[#4FA587] text-white px-1 py-0.5 rounded">
-                        1/4
-                      </span>
                     </div>
                   </div>
                 </div>
@@ -500,9 +502,14 @@ export default function Dashboard() {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-[#1D2F29] text-base">
-                      Healthy Habits
-                    </h3>
+                    <div className="flex justify-between items-center">
+                      <h3 className="font-semibold text-[#1D2F29] text-base">
+                        Healthy Habits
+                      </h3>
+                      <span className="text-xs bg-[#69BCDF] text-white px-1 py-0.5 rounded">
+                        3/4
+                      </span>
+                    </div>
                     <p className="text-[#676767] text-sm">Almost there!</p>
                     <div className="flex items-center gap-2 mt-2">
                       <div className="relative flex-1 bg-[#69BCDF]/30 h-1 rounded-full">
@@ -518,9 +525,6 @@ export default function Dashboard() {
                           }}
                         ></div>
                       </div>
-                      <span className="text-xs bg-[#69BCDF] text-white px-1 py-0.5 rounded">
-                        3/4
-                      </span>
                     </div>
                   </div>
                 </div>

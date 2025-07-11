@@ -416,9 +416,6 @@ export default function Dashboard() {
                         1/4
                       </span>
                     </div>
-                    <p className="text-[#676767] text-sm">
-                      One meal down, three to go.
-                    </p>
                     <div className="flex items-center gap-2 mt-2">
                       <div className="relative flex-1 bg-[#4FA587]/30 h-1 rounded-full">
                         <div
@@ -434,6 +431,9 @@ export default function Dashboard() {
                         ></div>
                       </div>
                     </div>
+                    <p className="text-[#676767] text-sm mt-2">
+                      One meal down, three to go.
+                    </p>
                   </div>
                 </div>
 
@@ -510,7 +510,6 @@ export default function Dashboard() {
                         3/4
                       </span>
                     </div>
-                    <p className="text-[#676767] text-sm">Almost there!</p>
                     <div className="flex items-center gap-2 mt-2">
                       <div className="relative flex-1 bg-[#69BCDF]/30 h-1 rounded-full">
                         <div
@@ -526,6 +525,7 @@ export default function Dashboard() {
                         ></div>
                       </div>
                     </div>
+                    <p className="text-[#676767] text-sm mt-2">Almost there!</p>
                   </div>
                 </div>
               </div>

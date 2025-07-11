@@ -30,7 +30,11 @@ const mealPrepStyles: MealPrepStyle[] = [
         className="w-[37px] h-[37px] rounded-full flex items-center justify-center"
         style={{ backgroundColor: "#3D7086" }}
       >
-        <Icon path={mdiCrown} size={0.8} color="white" />
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F63e0a1b311e5477db3177ce83648da47?format=webp&width=800"
+          alt="Batch Boss Icon"
+          className="w-5 h-5 filter brightness-0 invert"
+        />
       </div>
     ),
     tags: ["Organized", "Time-efficient", "Loves bulk cooking"],

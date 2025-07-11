@@ -831,7 +831,7 @@ export default function Dashboard() {
                 <h2 className="text-lg font-bold text-[#1D2F29]">
                   Healthy Habits
                 </h2>
-                <div className="flex justify-end items-center gap-4">
+                <div className="flex justify-between items-center w-full max-w-[calc(50%-0.5rem)]">
                   <Button className="bg-[#69BCDF] hover:bg-[#59ACCF] text-white text-xs px-3 py-1 h-auto flex items-center gap-1 rounded-full">
                     Edit Your Habits
                     <svg

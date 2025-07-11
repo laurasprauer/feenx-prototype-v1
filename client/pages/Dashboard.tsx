@@ -578,7 +578,7 @@ export default function Dashboard() {
                     I'm here to cheer you on and make sure you're feeling your
                     best, inside and out.
                   </p>
-                  <Button className="bg-[#406057] hover:bg-[#365147] text-white text-xs px-4 py-1 h-auto flex items-center gap-2">
+                  <Button className="bg-[#406057] hover:bg-[#365147] text-white text-xs px-4 py-2 h-auto flex items-center gap-2">
                     Chat with Avery
                     <svg
                       width="14"
@@ -610,14 +610,14 @@ export default function Dashboard() {
                 <p className="text-white text-xs">Marcus</p>
                 <p className="text-white/70 text-xs">Crunch Fitness</p>
               </div>
-              <div className="flex-1 p-4">
+              <div className="flex-1 p-4 flex flex-col justify-center">
                 <h3 className="font-semibold text-[#1D2F29] text-sm mb-1">
                   Connect with Your Personal Trainer
                 </h3>
-                <p className="text-[#1D2F29]/80 text-xs">
+                <p className="text-[#1D2F29]/80 text-xs mb-3">
                   Keep the momentum going, together
                 </p>
-                <Button className="bg-[#4FA587] hover:bg-[#3F8F77] text-white text-xs px-4 py-1 h-auto flex items-center gap-2">
+                <Button className="bg-[#4FA587] hover:bg-[#3F8F77] text-white text-xs px-4 py-2 h-auto flex items-center gap-2">
                   Chat with Marcus
                   <svg
                     width="14"

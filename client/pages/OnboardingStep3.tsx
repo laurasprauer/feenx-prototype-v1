@@ -207,9 +207,9 @@ export default function OnboardingStep3() {
             <button
               key={preference.id}
               onClick={() => togglePreference(preference.id)}
-              className={`h-[57px] px-4 py-[18px] border rounded-xl shadow-sm transition-all duration-200 hover:shadow-md flex items-center justify-center ${
+              className={`h-[57px] px-4 py-[18px] border rounded-xl shadow-sm transition-all duration-300 hover:shadow-md flex items-center justify-center ${
                 selectedPreferences.includes(preference.id)
-                  ? "border-[#E95929] border-2 bg-[#FFF4F1]"
+                  ? "border-[#E95929] bg-[#FFF4F1]"
                   : "border-[#4FA587] bg-white"
               }`}
             >
@@ -225,9 +225,9 @@ export default function OnboardingStep3() {
           <div className="flex justify-center mb-12">
             <button
               onClick={() => togglePreference(noRestrictionsOption.id)}
-              className={`h-[57px] px-4 py-[18px] border rounded-xl shadow-sm transition-all duration-200 hover:shadow-md flex items-center justify-center w-full max-w-[313px] ${
+              className={`h-[57px] px-4 py-[18px] border rounded-xl shadow-sm transition-all duration-300 hover:shadow-md flex items-center justify-center w-full max-w-[313px] ${
                 selectedPreferences.includes(noRestrictionsOption.id)
-                  ? "border-[#E95929] border-2 bg-[#FFF4F1]"
+                  ? "border-[#E95929] bg-[#FFF4F1]"
                   : "border-[#4FA587] bg-white"
               }`}
             >

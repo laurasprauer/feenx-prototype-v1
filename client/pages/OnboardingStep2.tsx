@@ -199,9 +199,9 @@ export default function OnboardingStep2() {
             <button
               key={condition.id}
               onClick={() => toggleCondition(condition.id)}
-              className={`h-[57px] px-4 py-[18px] border rounded-xl shadow-sm transition-all duration-200 hover:shadow-md flex items-center justify-center ${
+              className={`h-[57px] px-4 py-[18px] border rounded-xl shadow-sm transition-all duration-300 hover:shadow-md flex items-center justify-center ${
                 selectedConditions.includes(condition.id)
-                  ? "border-[#E95929] border-2 bg-[#FFF4F1]"
+                  ? "border-[#E95929] bg-[#FFF4F1]"
                   : "border-[#4FA587] bg-white"
               }`}
             >

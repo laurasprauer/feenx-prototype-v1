@@ -363,9 +363,9 @@ export default function Onboarding() {
             <button
               key={goal.id}
               onClick={() => toggleGoal(goal.id)}
-              className={`p-4 border rounded-xl shadow-sm transition-all duration-200 hover:shadow-md ${
+              className={`p-4 border rounded-xl shadow-sm transition-all duration-300 hover:shadow-md ${
                 selectedGoals.includes(goal.id)
-                  ? "border-[#E95929] border-2 bg-[#FFF4F1]"
+                  ? "border-[#E95929] bg-[#FFF4F1]"
                   : "border-[#4FA587] bg-white"
               }`}
             >

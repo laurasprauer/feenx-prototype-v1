@@ -111,9 +111,7 @@ export default function MealPrepBlueprint() {
 
   return (
     <div className="min-h-screen bg-[#E0F1EB]">
-      {/* Header */}
-      <header className="bg-[#1D2F29] w-full h-[58px] flex items-center justify-center">
-        <svg
+            <Header />
           width="152"
           height="35"
           viewBox="0 0 152 35"

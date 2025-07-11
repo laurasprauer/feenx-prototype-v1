@@ -466,7 +466,7 @@ export default function Dashboard() {
                 </p>
                 <div
                   className="absolute left-6 z-10"
-                  style={{ bottom: "-104px" }}
+                  style={{ bottom: "-94px" }}
                 >
                   <svg
                     width="66"

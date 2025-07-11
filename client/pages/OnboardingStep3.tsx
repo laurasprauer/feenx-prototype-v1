@@ -50,9 +50,8 @@ export default function OnboardingStep3() {
   };
 
   const handleNext = () => {
-    // Navigate to step 4 (to be created)
     console.log("Selected preferences:", selectedPreferences);
-    // navigate("/onboarding/step4");
+    navigate("/onboarding/step4");
   };
 
   // Split preferences for grid layout - all except "No Restrictions" in 2 columns, then "No Restrictions" centered

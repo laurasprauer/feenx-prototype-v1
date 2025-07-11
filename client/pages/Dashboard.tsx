@@ -464,7 +464,7 @@ export default function Dashboard() {
                   some magnesium-rich foods today to support your hormonal
                   balance.
                 </p>
-                <div className="absolute bottom-0 right-2.5">
+                <div className="absolute -bottom-6 left-6 z-10">
                   <svg
                     width="66"
                     height="63"

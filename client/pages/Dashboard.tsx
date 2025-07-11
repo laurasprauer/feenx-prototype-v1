@@ -322,7 +322,9 @@ export default function Dashboard() {
           <div className="lg:col-span-1 h-full">
             <div className="bg-white rounded-lg border border-[#4FA587] shadow-sm h-full flex flex-col">
               <div className="bg-[#1D2F29] text-white p-4 rounded-t-lg">
-                <h2 className="text-lg font-bold">Today's Health Snapshot</h2>
+                <h2 className="text-lg font-bold pl-2">
+                  Today's Health Snapshot
+                </h2>
               </div>
               <div className="p-6 space-y-6 flex-1">
                 {/* 8 Day Streak */}

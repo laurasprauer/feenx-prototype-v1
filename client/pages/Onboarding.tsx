@@ -18,8 +18,8 @@ const goals: Goal[] = [
     iconColor: "#406057",
     icon: (
       <svg
-        width="20"
-        height="20"
+        width="37"
+        height="37"
         viewBox="0 0 37 37"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -28,8 +28,8 @@ const goals: Goal[] = [
         <svg
           x="9"
           y="9"
-          width="20"
-          height="19"
+          width="16"
+          height="15"
           viewBox="0 0 20 19"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -49,8 +49,8 @@ const goals: Goal[] = [
     iconColor: "#D7CFBA",
     icon: (
       <svg
-        width="20"
-        height="20"
+        width="37"
+        height="37"
         viewBox="0 0 37 37"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -70,8 +70,8 @@ const goals: Goal[] = [
     iconColor: "#BDDFD3",
     icon: (
       <svg
-        width="20"
-        height="20"
+        width="37"
+        height="37"
         viewBox="0 0 37 37"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -93,8 +93,8 @@ const goals: Goal[] = [
     iconColor: "#4FA587",
     icon: (
       <svg
-        width="20"
-        height="20"
+        width="37"
+        height="37"
         viewBox="0 0 37 37"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -114,8 +114,8 @@ const goals: Goal[] = [
     iconColor: "#E95929",
     icon: (
       <svg
-        width="20"
-        height="20"
+        width="37"
+        height="37"
         viewBox="0 0 37 37"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -149,8 +149,8 @@ const goals: Goal[] = [
     iconColor: "#8FE9BC",
     icon: (
       <svg
-        width="20"
-        height="20"
+        width="37"
+        height="37"
         viewBox="0 0 37 37"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -170,8 +170,8 @@ const goals: Goal[] = [
     iconColor: "#3D7086",
     icon: (
       <svg
-        width="20"
-        height="20"
+        width="37"
+        height="37"
         viewBox="0 0 37 37"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -191,8 +191,8 @@ const goals: Goal[] = [
     iconColor: "#69BCDF",
     icon: (
       <svg
-        width="20"
-        height="20"
+        width="37"
+        height="37"
         viewBox="0 0 37 37"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

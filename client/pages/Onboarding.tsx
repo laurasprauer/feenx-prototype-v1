@@ -89,7 +89,7 @@ const goals: Goal[] = [
   {
     id: "meal-prep",
     title: "Meal Prep Mastery",
-    description: "Streamline your meal preparation routine",
+    description: "Streamline your meal prep routine",
     iconColor: "#4FA587",
     icon: (
       <svg

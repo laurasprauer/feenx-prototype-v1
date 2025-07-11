@@ -498,7 +498,7 @@ export default function Dashboard() {
               </div>
               <div
                 className="bg-[#CBE3DA] rounded-lg border border-[#1D2F29] shadow-md p-4 flex items-start gap-4 ml-auto"
-                style={{ maxWidth: "548px", marginTop: "22px" }}
+                style={{ maxWidth: "548px", marginTop: "12px" }}
               >
                 <div className="w-16 h-16 rounded-full border border-[#1D2F29] bg-white overflow-hidden flex-shrink-0">
                   <img

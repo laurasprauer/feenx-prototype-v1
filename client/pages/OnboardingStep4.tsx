@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import Icon from "@mdi/react";
+import { mdiCrown } from "@mdi/js";
 
 interface MealPrepStyle {
   id: string;
@@ -24,23 +26,12 @@ const mealPrepStyles: MealPrepStyle[] = [
       "You love spending the day prepping everything for the entire week",
     iconColor: "#3D7086",
     icon: (
-      <svg
-        width="37"
-        height="37"
-        viewBox="0 0 37 37"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        className="w-[37px] h-[37px] rounded-full flex items-center justify-center"
+        style={{ backgroundColor: "#3D7086" }}
       >
-        <circle cx="18.5" cy="18.5" r="18.5" fill="#3D7086" />
-        <path d="M11 23V21L12 19H25L26 21V23H25V25H12V23H11Z" fill="white" />
-        <path
-          d="M14 19V16L15 13H16L17 10L18.5 12L20 10L21 13H22L23 16V19H14Z"
-          fill="white"
-        />
-        <circle cx="15.5" cy="15" r="1" fill="#3D7086" />
-        <circle cx="18.5" cy="13" r="1" fill="#3D7086" />
-        <circle cx="21.5" cy="15" r="1" fill="#3D7086" />
-      </svg>
+        <Icon path={mdiCrown} size={0.8} color="white" />
+      </div>
     ),
     tags: ["Organized", "Time-efficient", "Loves bulk cooking"],
   },
@@ -71,7 +62,7 @@ const mealPrepStyles: MealPrepStyle[] = [
   {
     id: "fresh-daily",
     title: "The Fresh Daily",
-    description: "You enjoy cooking fresh meals every day",
+    description: "You love cooking fresh\nmeals daily",
     iconColor: "#4FA587",
     icon: (
       <svg
@@ -323,7 +314,7 @@ export default function OnboardingStep4() {
                   <h3 className="font-semibold text-[#1D2F29] text-base">
                     {style.title}
                   </h3>
-                  <p className="text-[#676767] text-sm leading-relaxed">
+                  <p className="text-[#676767] text-sm leading-relaxed whitespace-pre-line">
                     {style.description}
                   </p>
                 </div>

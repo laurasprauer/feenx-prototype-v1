@@ -447,19 +447,29 @@ export default function Dashboard() {
             {/* Coach's Corner */}
             <div className="relative">
               <div className="bg-gradient-to-b from-[#4FA587] to-[#3C504B] rounded-t-lg p-6 text-white">
-                <div className="inline-block bg-[#1D2F29] text-white px-4 py-2 rounded-l-md text-sm font-semibold mb-4">
-                  Coach's Corner
+                <div className="relative inline-block mb-4">
+                  <div
+                    className="bg-[#1D2F29] text-white px-6 py-3 text-sm font-semibold relative"
+                    style={{
+                      borderRadius: "8px 0 0 8px",
+                      clipPath:
+                        "polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%)",
+                    }}
+                  >
+                    Coach's Corner
+                  </div>
                 </div>
                 <p className="text-base mb-4">
                   Your energy levels have been steady this week! Consider adding
                   some magnesium-rich foods today to support your hormonal
                   balance.
                 </p>
+              </div>
+              <div className="bg-[#1D2F29] h-12 rounded-b-lg flex items-center justify-end px-6">
                 <Button className="bg-[#8FE9BC] hover:bg-[#7FD9AC] text-black text-xs px-4 py-1 h-auto">
                   Learn More →
                 </Button>
               </div>
-              <div className="bg-[#1D2F29] h-12 rounded-b-lg"></div>
               <div className="bg-[#CBE3DA] rounded-lg border border-[#1D2F29] shadow-md p-4 mt-8 flex items-start gap-4">
                 <div className="w-16 h-16 rounded-full border border-[#1D2F29] bg-white overflow-hidden flex-shrink-0">
                   <img

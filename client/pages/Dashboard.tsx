@@ -324,7 +324,7 @@ export default function Dashboard() {
               <div className="bg-[#1D2F29] text-white p-4 rounded-t-lg">
                 <h2 className="text-lg font-bold">Today's Health Snapshot</h2>
               </div>
-              <div className="p-4 space-y-4">
+              <div className="p-4 space-y-4 flex-1">
                 {/* 8 Day Streak */}
                 <div className="flex items-start gap-3">
                   <div className="w-9 h-9 bg-[#E95929] rounded-full flex items-center justify-center">

@@ -313,7 +313,7 @@ export default function OnboardingStep4() {
         </div>
 
         {/* Meal Prep Style Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
           {mealPrepStyles.map((style) => (
             <button
               key={style.id}
@@ -355,20 +355,39 @@ export default function OnboardingStep4() {
           <h3 className="text-[#1D2F29] text-lg font-normal text-center mb-6">
             Which day works best for meal prep?
           </h3>
-          <div className="flex flex-wrap gap-2 justify-center">
-            {daysOfWeek.map((day) => (
-              <button
-                key={day.id}
-                onClick={() => handleDaySelect(day.id)}
-                className={`px-4 py-2 rounded-full border text-sm font-normal transition-all duration-300 ${
-                  selectedDay === day.id
-                    ? "border-[#E95929] bg-[#FFF4F1] text-[#1D2F29]"
-                    : "border-[#1D2F29] bg-white text-[#1D2F29] hover:bg-gray-50"
-                }`}
-              >
-                {day.label}
-              </button>
-            ))}
+          <div className="flex flex-col items-center gap-3">
+            {/* Top row - 4 days */}
+            <div className="flex gap-3">
+              {daysOfWeek.slice(0, 4).map((day) => (
+                <button
+                  key={day.id}
+                  onClick={() => handleDaySelect(day.id)}
+                  className={`px-4 py-2 rounded-full border text-sm font-normal transition-all duration-300 ${
+                    selectedDay === day.id
+                      ? "border-[#E95929] bg-[#FFF4F1] text-[#1D2F29]"
+                      : "border-[#1D2F29] bg-white text-[#1D2F29] hover:bg-gray-50"
+                  }`}
+                >
+                  {day.label}
+                </button>
+              ))}
+            </div>
+            {/* Bottom row - 3 days */}
+            <div className="flex gap-3">
+              {daysOfWeek.slice(4).map((day) => (
+                <button
+                  key={day.id}
+                  onClick={() => handleDaySelect(day.id)}
+                  className={`px-4 py-2 rounded-full border text-sm font-normal transition-all duration-300 ${
+                    selectedDay === day.id
+                      ? "border-[#E95929] bg-[#FFF4F1] text-[#1D2F29]"
+                      : "border-[#1D2F29] bg-white text-[#1D2F29] hover:bg-gray-50"
+                  }`}
+                >
+                  {day.label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 

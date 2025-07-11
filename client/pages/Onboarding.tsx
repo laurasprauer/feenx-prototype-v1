@@ -358,7 +358,7 @@ export default function Onboarding() {
         </div>
 
         {/* Goals Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
           {goals.map((goal) => (
             <button
               key={goal.id}

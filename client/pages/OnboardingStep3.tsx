@@ -201,7 +201,7 @@ export default function OnboardingStep3() {
         </div>
 
         {/* Dietary Preferences Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
           {gridPreferences.map((preference) => (
             <button
               key={preference.id}

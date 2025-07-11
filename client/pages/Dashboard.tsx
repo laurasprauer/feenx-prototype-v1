@@ -450,7 +450,7 @@ export default function Dashboard() {
                     <Button className="mt-2 bg-[#D7CFBA] hover:bg-[#C7BFAA] text-black text-xs px-3 py-1 h-auto flex items-center gap-1">
                       Log
                       <svg
-                        width="9"
+                        width="10"
                         height="9"
                         viewBox="0 0 9 9"
                         fill="none"
@@ -574,7 +574,7 @@ export default function Dashboard() {
                 <Button className="bg-[#8FE9BC] hover:bg-[#7FD9AC] text-black text-xs px-4 py-1 h-auto flex items-center gap-1">
                   Learn More
                   <svg
-                    width="9"
+                    width="10"
                     height="9"
                     viewBox="0 0 9 9"
                     fill="none"
@@ -681,7 +681,7 @@ export default function Dashboard() {
                   <Button className="bg-[#4FA587] hover:bg-[#3F8F77] text-white text-xs px-3 py-1 h-auto flex items-center gap-1">
                     View Meal Plan
                     <svg
-                      width="9"
+                      width="10"
                       height="9"
                       viewBox="0 0 9 9"
                       fill="none"
@@ -809,7 +809,7 @@ export default function Dashboard() {
                   <Button className="bg-[#69BCDF] hover:bg-[#59ACCF] text-white text-xs px-3 py-1 h-auto flex items-center gap-1">
                     Edit Your Habits
                     <svg
-                      width="9"
+                      width="10"
                       height="9"
                       viewBox="0 0 9 9"
                       fill="none"

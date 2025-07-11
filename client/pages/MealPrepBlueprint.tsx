@@ -161,7 +161,7 @@ export default function MealPrepBlueprint() {
         {/* Top Section */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-4">
-            <div className="w-[60px] h-[60px] rounded-full border border-[#1D2F29] bg-white shadow-md overflow-hidden">
+            <div className="w-[65px] h-[65px] rounded-full border border-[#1D2F29] bg-white shadow-md overflow-hidden">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F572fbbd844e2486fbda2dc8f56c0d764?format=webp&width=800"
                 alt="Profile"

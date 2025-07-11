@@ -239,7 +239,7 @@ export default function Dashboard() {
       </header>
 
       {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-4 py-6">
+      <div className="max-w-[900px] mx-auto px-4 py-6">
         {/* User Greeting */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-4">

@@ -797,7 +797,7 @@ export default function Dashboard() {
 
               {/* Action Buttons */}
               <div className="flex gap-4 mt-6">
-                <div className="flex-1 max-w-[250px]">
+                <div className="flex-1 max-w-[280px]">
                   <div className="flex rounded-lg overflow-hidden">
                     <div className="bg-[#1D2F29] p-4 flex items-center justify-start">
                       <svg
@@ -873,11 +873,11 @@ export default function Dashboard() {
                       </span>
                     </div>
                   </div>
-                  <p className="text-[#676767] text-sm mt-2">
+                  <p className="text-[#676767] text-sm mt-2 text-center">
                     Healthy eating starts with a plan
                   </p>
                 </div>
-                <div className="flex-1 max-w-[250px]">
+                <div className="flex-1 max-w-[280px]">
                   <div className="flex rounded-lg overflow-hidden">
                     <div className="bg-[#1D2F29] p-4 flex items-center justify-start">
                       <svg
@@ -899,7 +899,7 @@ export default function Dashboard() {
                       </span>
                     </div>
                   </div>
-                  <p className="text-[#676767] text-sm mt-2">
+                  <p className="text-[#676767] text-sm mt-2 text-center">
                     Organize your shopping with ease
                   </p>
                 </div>

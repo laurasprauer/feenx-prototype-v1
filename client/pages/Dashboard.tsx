@@ -690,7 +690,7 @@ export default function Dashboard() {
           <div className="bg-white rounded-lg border border-[#4FA587] shadow-sm">
             <div className="p-6">
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-lg font-bold text-[#1D2F29]">
+                <h2 className="text-lg font-bold text-[#1D2F29] flex items-center">
                   Today's Meals
                 </h2>
                 <div className="flex justify-between items-center w-full max-w-[calc(50%-0.5rem)]">
@@ -828,7 +828,7 @@ export default function Dashboard() {
           <div className="bg-white rounded-lg border border-[#4FA587] shadow-sm">
             <div className="p-6">
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-lg font-bold text-[#1D2F29]">
+                <h2 className="text-lg font-bold text-[#1D2F29] flex items-center">
                   Healthy Habits
                 </h2>
                 <div className="flex justify-between items-center w-full max-w-[calc(50%-0.5rem)]">

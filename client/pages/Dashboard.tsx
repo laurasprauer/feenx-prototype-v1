@@ -329,7 +329,7 @@ export default function Dashboard() {
                   Today's Health Snapshot
                 </h2>
               </div>
-              <div className="p-6 space-y-6 flex-1">
+              <div className="p-6 space-y-8 flex-1">
                 {/* 8 Day Streak */}
                 <div className="flex items-start gap-5">
                   <div className="w-9 h-9 bg-[#E95929] rounded-full flex items-center justify-center">

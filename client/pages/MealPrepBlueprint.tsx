@@ -233,8 +233,8 @@ export default function MealPrepBlueprint() {
 
         {/* Navigation Buttons */}
         <div className="flex gap-3 mb-8">
-          <button
-            onClick={() => window.history.back()}
+          <Link
+            to="/dashboard"
             className="flex items-center gap-2 bg-white text-[#1D2F29] px-4 py-2 rounded-full text-sm font-medium border border-gray-200 hover:bg-gray-50 transition-colors"
           >
             <svg width="9" height="9" viewBox="0 0 9 9" fill="none">
@@ -248,7 +248,7 @@ export default function MealPrepBlueprint() {
               />
             </svg>
             Dashboard
-          </button>
+          </Link>
 
           <button className="flex items-center gap-2 bg-[#1D2F29] text-white px-4 py-2 rounded-full text-sm font-medium">
             <svg width="11" height="11" viewBox="0 0 11 11" fill="none">

@@ -95,7 +95,7 @@ const macros: MacroItem[] = [
     target: 1650,
     unit: "",
     color: "#8FE9BC",
-    progress: 23,
+    progress: 19.4,
   },
   {
     name: "Fat",
@@ -103,7 +103,7 @@ const macros: MacroItem[] = [
     target: 65,
     unit: "g",
     color: "#3D7086",
-    progress: 85,
+    progress: 84.6,
   },
   {
     name: "Protein",
@@ -111,7 +111,7 @@ const macros: MacroItem[] = [
     target: 120,
     unit: "g",
     color: "#69BCDF",
-    progress: 63,
+    progress: 62.5,
   },
   {
     name: "Fiber",
@@ -119,7 +119,7 @@ const macros: MacroItem[] = [
     target: 30,
     unit: "g",
     color: "#D7CFBA",
-    progress: 17,
+    progress: 16.7,
   },
   {
     name: "Carbs",
@@ -127,7 +127,7 @@ const macros: MacroItem[] = [
     target: 180,
     unit: "g",
     color: "#4FA587",
-    progress: 36,
+    progress: 36.1,
   },
 ];
 
@@ -614,7 +614,7 @@ export default function Dashboard() {
                 <h3 className="font-semibold text-[#1D2F29] text-sm mb-1">
                   Connect with Your Personal Trainer
                 </h3>
-                <p className="text-[#1D2F29]/80 text-xs mb-3">
+                <p className="text-[#1D2F29]/80 text-xs">
                   Keep the momentum going, together
                 </p>
                 <Button className="bg-[#4FA587] hover:bg-[#3F8F77] text-white text-xs px-4 py-1 h-auto flex items-center gap-2">

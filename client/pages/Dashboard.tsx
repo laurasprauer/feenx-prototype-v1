@@ -242,7 +242,7 @@ export default function Dashboard() {
         {/* User Greeting */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-4">
-            <div className="w-[60px] h-[60px] rounded-full border border-[#1D2F29] bg-white shadow-md overflow-hidden">
+            <div className="w-[65px] h-[65px] rounded-full border border-[#1D2F29] bg-white shadow-md overflow-hidden">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F572fbbd844e2486fbda2dc8f56c0d764?format=webp&width=800"
                 alt="Profile"
@@ -480,7 +480,7 @@ export default function Dashboard() {
                       </Button>
                     </div>
                     <p className="text-[#676767] text-sm">
-                      Record your energy to stay in tune with your body.
+                      Stay in tune with your body
                     </p>
                   </div>
                 </div>
@@ -621,7 +621,7 @@ export default function Dashboard() {
                 className="bg-[#CBE3DA] rounded-lg border border-[#1D2F29] shadow-md p-4 flex items-start gap-4 ml-auto"
                 style={{ width: "calc(100% - 102px)", marginTop: "12px" }}
               >
-                <div className="w-16 h-16 rounded-full border border-[#1D2F29] bg-white overflow-hidden flex-shrink-0">
+                <div className="w-[50px] h-[50px] rounded-full border border-[#1D2F29] bg-white overflow-hidden flex-shrink-0">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F132c9b9b6b8d4ff5b9b6c416e1449cc2?format=webp&width=800"
                     alt="Coach Avery"
@@ -658,7 +658,7 @@ export default function Dashboard() {
             {/* Personal Trainer */}
             <div className="bg-white rounded-lg border border-[#1D2F29] shadow-sm flex">
               <div className="bg-[#1D2F29] rounded-l-lg p-4 flex flex-col items-center justify-center">
-                <div className="w-12 h-12 rounded-full border border-[#BBC1BF] bg-white overflow-hidden mb-2">
+                <div className="w-[50px] h-[50px] rounded-full border border-[#BBC1BF] bg-white overflow-hidden mb-2">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2Fcdc7a4b2de164c56b2e3a46016272002?format=webp&width=800"
                     alt="Marcus"

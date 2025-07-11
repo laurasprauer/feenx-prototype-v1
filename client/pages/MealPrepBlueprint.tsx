@@ -236,16 +236,18 @@ export default function MealPrepBlueprint() {
         <div className="flex gap-3 mb-8">
           <Link
             to="/dashboard"
-            className="flex items-center gap-2 bg-white text-[#1D2F29] px-4 py-2 rounded-full text-sm font-medium border border-gray-200 hover:bg-[#4FA587] hover:text-white transition-colors"
+            className="group flex items-center gap-2 bg-white text-[#1D2F29] px-4 py-2 rounded-full text-sm font-medium border border-gray-200 hover:bg-[#4FA587] hover:text-white transition-colors"
           >
             <svg width="9" height="9" viewBox="0 0 9 9" fill="none">
               <path
                 d="M7.87524 5.14282L7.94054 5.13968C8.26482 5.10688 8.5181 4.8329 8.5181 4.49997C8.5181 4.16703 8.26482 3.89305 7.94054 3.86025L7.87524 3.85711H1.50003C1.14499 3.85711 0.857178 4.14492 0.857178 4.49997C0.857178 4.85501 1.14499 5.14282 1.50003 5.14282H7.87524Z"
                 fill="#1D2F29"
+                className="group-hover:fill-white transition-colors"
               />
               <path
                 d="M4.57966 7.95453C4.3286 8.20559 3.92167 8.20559 3.67062 7.95453L0.670406 4.95432C0.419565 4.70326 0.419425 4.29627 0.670406 4.04528L3.67062 1.0457C3.92167 0.794652 4.3286 0.794652 4.57966 1.0457C4.8306 1.29676 4.83067 1.70373 4.57966 1.95474L2.03459 4.50043L4.57966 7.04549C4.83071 7.29655 4.83071 7.70348 4.57966 7.95453Z"
                 fill="#1D2F29"
+                className="group-hover:fill-white transition-colors"
               />
             </svg>
             Dashboard

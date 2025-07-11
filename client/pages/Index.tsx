@@ -49,6 +49,7 @@ export default function Index() {
         {/* CTA Button */}
         <Button
           size="lg"
+          onClick={() => navigate("/onboarding")}
           className="bg-feenx-orange hover:bg-feenx-orange-hover text-white font-sans font-semibold px-12 sm:px-16 lg:px-20 py-4 sm:py-5 lg:py-6 text-sm sm:text-base lg:text-lg rounded-lg transition-all duration-200 mb-6 sm:mb-8 shadow-lg hover:shadow-xl transform hover:scale-105 w-auto min-w-[280px] sm:min-w-[320px]"
         >
           Let's get started

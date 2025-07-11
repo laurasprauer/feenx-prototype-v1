@@ -449,18 +449,16 @@ export default function Dashboard() {
               <div className="bg-gradient-to-b from-[#4FA587] to-[#3C504B] rounded-t-lg p-6 text-white relative">
                 <div className="relative inline-block mb-4">
                   <div
-                    className="bg-[#1D2F29] text-white pl-6 pr-10 py-3 text-sm font-semibold relative rounded-l-lg"
+                    className="bg-[#1D2F29] text-white pl-6 pr-10 py-3 text-sm font-semibold relative"
                     style={{
                       borderRadius: "8px 0 0 8px",
                     }}
                   >
                     Coach's Corner
                     <div
-                      className="absolute top-0 right-0 w-5 h-full bg-[#1D2F29]"
+                      className="absolute top-1/2 -right-2 w-4 h-4 bg-[#1D2F29] transform -translate-y-1/2 rotate-45"
                       style={{
-                        borderRadius: "0 6px 6px 0",
-                        transform: "rotate(45deg) translate(50%, 0)",
-                        transformOrigin: "left center",
+                        borderRadius: "0 6px 0 0",
                       }}
                     ></div>
                   </div>

@@ -446,7 +446,7 @@ export default function Dashboard() {
           <div className="lg:col-span-2 space-y-6">
             {/* Coach's Corner */}
             <div className="relative">
-              <div className="bg-gradient-to-b from-[#4FA587] to-[#3C504B] rounded-t-lg p-6 text-white">
+              <div className="bg-gradient-to-b from-[#4FA587] to-[#3C504B] rounded-t-lg p-6 text-white relative">
                 <div className="relative inline-block mb-4">
                   <div
                     className="bg-[#1D2F29] text-white pl-6 pr-10 py-3 text-sm font-semibold relative"
@@ -464,6 +464,29 @@ export default function Dashboard() {
                   some magnesium-rich foods today to support your hormonal
                   balance.
                 </p>
+                <div className="absolute bottom-0 right-2.5">
+                  <svg
+                    width="66"
+                    height="63"
+                    viewBox="0 0 66 63"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clipPath="url(#clip0_45_714)">
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M65.8436 0.0581055V56.7771C65.8436 60.1414 63.0982 62.8688 59.7116 62.8688C57.9743 62.8688 56.3186 62.1367 55.1558 60.8545L0.0194702 0.0581055H65.8436Z"
+                        fill="#1D2F29"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_45_714">
+                        <rect width="66" height="63" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
               </div>
               <div className="bg-[#1D2F29] h-12 rounded-b-lg flex items-center justify-end px-6">
                 <Button className="bg-[#8FE9BC] hover:bg-[#7FD9AC] text-black text-xs px-4 py-1 h-auto">

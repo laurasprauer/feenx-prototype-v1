@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom";
+
 import { FeenXLogo } from "@/components/FeenXLogo";
 import { Button } from "@/components/ui/button";
 
@@ -46,14 +46,12 @@ export default function Index() {
         </p>
 
         {/* CTA Button */}
-        <Link to="/onboarding">
-          <Button
-            size="lg"
-            className="bg-feenx-orange hover:bg-feenx-orange-hover text-white font-sans font-semibold px-12 sm:px-16 lg:px-20 py-4 sm:py-5 lg:py-6 text-sm sm:text-base lg:text-lg rounded-lg transition-all duration-200 mb-6 sm:mb-8 shadow-lg hover:shadow-xl transform hover:scale-105 w-auto min-w-[280px] sm:min-w-[320px]"
-          >
-            Let's get started
-          </Button>
-        </Link>
+        <Button
+          size="lg"
+          className="bg-feenx-orange hover:bg-feenx-orange-hover text-white font-sans font-semibold px-12 sm:px-16 lg:px-20 py-4 sm:py-5 lg:py-6 text-sm sm:text-base lg:text-lg rounded-lg transition-all duration-200 mb-6 sm:mb-8 shadow-lg hover:shadow-xl transform hover:scale-105 w-auto min-w-[280px] sm:min-w-[320px]"
+        >
+          Let's get started
+        </Button>
 
         {/* Login Links */}
         <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-white/60 text-xs sm:text-sm font-sans">
@@ -72,3 +70,4 @@ export default function Index() {
     </div>
   );
 }
+

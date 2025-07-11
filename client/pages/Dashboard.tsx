@@ -447,8 +447,24 @@ export default function Dashboard() {
                     <p className="text-[#676767] text-sm">
                       Record your energy to stay in tune with your body.
                     </p>
-                    <Button className="mt-2 bg-[#D7CFBA] hover:bg-[#C7BFAA] text-black text-xs px-3 py-1 h-auto">
-                      Log →
+                    <Button className="mt-2 bg-[#D7CFBA] hover:bg-[#C7BFAA] text-black text-xs px-3 py-1 h-auto flex items-center gap-1">
+                      Log
+                      <svg
+                        width="9"
+                        height="9"
+                        viewBox="0 0 9 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.12476 5.14282L1.05946 5.13968C0.735182 5.10688 0.481898 4.8329 0.481898 4.49997C0.481898 4.16703 0.735182 3.89305 1.05946 3.86025L1.12476 3.85711H7.49997C7.85501 3.85711 8.14282 4.14492 8.14282 4.49997C8.14282 4.85501 7.85501 5.14282 7.49997 5.14282H1.12476Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M4.42034 7.95453C4.6714 8.20559 5.07833 8.20559 5.32938 7.95453L8.32959 4.95432C8.58043 4.70326 8.58057 4.29627 8.32959 4.04528L5.32938 1.0457C5.07833 0.794652 4.6714 0.794652 4.42034 1.0457C4.1694 1.29676 4.16933 1.70373 4.42034 1.95474L6.96541 4.50043L4.42034 7.04549C4.16929 7.29655 4.16929 7.70348 4.42034 7.95453Z"
+                          fill="black"
+                        />
+                      </svg>
                     </Button>
                   </div>
                 </div>
@@ -555,8 +571,24 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="bg-[#1D2F29] h-12 rounded-b-lg flex items-center justify-end px-6">
-                <Button className="bg-[#8FE9BC] hover:bg-[#7FD9AC] text-black text-xs px-4 py-1 h-auto">
-                  Learn More →
+                <Button className="bg-[#8FE9BC] hover:bg-[#7FD9AC] text-black text-xs px-4 py-1 h-auto flex items-center gap-1">
+                  Learn More
+                  <svg
+                    width="9"
+                    height="9"
+                    viewBox="0 0 9 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.12476 5.14282L1.05946 5.13968C0.735182 5.10688 0.481898 4.8329 0.481898 4.49997C0.481898 4.16703 0.735182 3.89305 1.05946 3.86025L1.12476 3.85711H7.49997C7.85501 3.85711 8.14282 4.14492 8.14282 4.49997C8.14282 4.85501 7.85501 5.14282 7.49997 5.14282H1.12476Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M4.42034 7.95453C4.6714 8.20559 5.07833 8.20559 5.32938 7.95453L8.32959 4.95432C8.58043 4.70326 8.58057 4.29627 8.32959 4.04528L5.32938 1.0457C5.07833 0.794652 4.6714 0.794652 4.42034 1.0457C4.1694 1.29676 4.16933 1.70373 4.42034 1.95474L6.96541 4.50043L4.42034 7.04549C4.16929 7.29655 4.16929 7.70348 4.42034 7.95453Z"
+                      fill="black"
+                    />
+                  </svg>
                 </Button>
               </div>
               <div
@@ -646,8 +678,24 @@ export default function Dashboard() {
                   Today's Meals
                 </h2>
                 <div className="flex items-center gap-2">
-                  <Button className="bg-[#4FA587] hover:bg-[#3F8F77] text-white text-xs px-3 py-1 h-auto">
-                    View Meal Plan →
+                  <Button className="bg-[#4FA587] hover:bg-[#3F8F77] text-white text-xs px-3 py-1 h-auto flex items-center gap-1">
+                    View Meal Plan
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 9 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.12476 5.14282L1.05946 5.13968C0.735182 5.10688 0.481898 4.8329 0.481898 4.49997C0.481898 4.16703 0.735182 3.89305 1.05946 3.86025L1.12476 3.85711H7.49997C7.85501 3.85711 8.14282 4.14492 8.14282 4.49997C8.14282 4.85501 7.85501 5.14282 7.49997 5.14282H1.12476Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M4.42034 7.95453C4.6714 8.20559 5.07833 8.20559 5.32938 7.95453L8.32959 4.95432C8.58043 4.70326 8.58057 4.29627 8.32959 4.04528L5.32938 1.0457C5.07833 0.794652 4.6714 0.794652 4.42034 1.0457C4.1694 1.29676 4.16933 1.70373 4.42034 1.95474L6.96541 4.50043L4.42034 7.04549C4.16929 7.29655 4.16929 7.70348 4.42034 7.95453Z"
+                        fill="white"
+                      />
+                    </svg>
                   </Button>
                   <div className="flex items-center gap-2">
                     <div className="flex-1 bg-[#4FA587]/30 h-1 rounded-full w-20">
@@ -758,8 +806,24 @@ export default function Dashboard() {
                   Healthy Habits
                 </h2>
                 <div className="flex items-center gap-2">
-                  <Button className="bg-[#69BCDF] hover:bg-[#59ACCF] text-white text-xs px-3 py-1 h-auto">
-                    Edit Your Habits →
+                  <Button className="bg-[#69BCDF] hover:bg-[#59ACCF] text-white text-xs px-3 py-1 h-auto flex items-center gap-1">
+                    Edit Your Habits
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 9 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.12476 5.14282L1.05946 5.13968C0.735182 5.10688 0.481898 4.8329 0.481898 4.49997C0.481898 4.16703 0.735182 3.89305 1.05946 3.86025L1.12476 3.85711H7.49997C7.85501 3.85711 8.14282 4.14492 8.14282 4.49997C8.14282 4.85501 7.85501 5.14282 7.49997 5.14282H1.12476Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M4.42034 7.95453C4.6714 8.20559 5.07833 8.20559 5.32938 7.95453L8.32959 4.95432C8.58043 4.70326 8.58057 4.29627 8.32959 4.04528L5.32938 1.0457C5.07833 0.794652 4.6714 0.794652 4.42034 1.0457C4.1694 1.29676 4.16933 1.70373 4.42034 1.95474L6.96541 4.50043L4.42034 7.04549C4.16929 7.29655 4.16929 7.70348 4.42034 7.95453Z"
+                        fill="white"
+                      />
+                    </svg>
                   </Button>
                   <div className="flex items-center gap-2">
                     <div className="flex-1 bg-[#69BCDF]/30 h-1 rounded-full w-20">

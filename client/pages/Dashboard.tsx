@@ -317,7 +317,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Today's Health Snapshot */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg border border-[#4FA587] shadow-sm">
@@ -443,7 +443,7 @@ export default function Dashboard() {
           </div>
 
           {/* Coach's Corner and Today's Meals */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="lg:col-span-1 space-y-6">
             {/* Coach's Corner */}
             <div className="relative">
               <div className="bg-gradient-to-b from-[#4FA587] to-[#3C504B] rounded-t-lg p-6 text-white relative">

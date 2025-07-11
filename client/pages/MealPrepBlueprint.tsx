@@ -236,7 +236,7 @@ export default function MealPrepBlueprint() {
         <div className="flex gap-3 mb-8">
           <Link
             to="/dashboard"
-            className="flex items-center gap-2 bg-white text-[#1D2F29] px-4 py-2 rounded-full text-sm font-medium border border-gray-200 hover:bg-gray-50 transition-colors"
+            className="flex items-center gap-2 bg-white text-[#1D2F29] px-4 py-2 rounded-full text-sm font-medium border border-gray-200 hover:bg-[#4FA587] hover:text-white transition-colors"
           >
             <svg width="9" height="9" viewBox="0 0 9 9" fill="none">
               <path

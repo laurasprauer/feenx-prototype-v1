@@ -14,6 +14,7 @@ import OnboardingStep4 from "./pages/OnboardingStep4";
 import Dashboard from "./pages/Dashboard";
 import MealPrepBlueprint from "./pages/MealPrepBlueprint";
 import MealPrepBlueprintDetails from "./pages/MealPrepBlueprintDetails";
+import ViewMealPlan from "./pages/ViewMealPlan";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();

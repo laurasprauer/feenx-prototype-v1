@@ -467,7 +467,7 @@ export default function Dashboard() {
                     ></div>
                   </div>
                 </div>
-                <p className="text-base mb-4">
+                <p className="text-base mb-2">
                   Your energy levels have been steady this week! Consider adding
                   some magnesium-rich foods today to support your hormonal
                   balance.

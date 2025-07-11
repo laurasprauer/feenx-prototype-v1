@@ -36,6 +36,7 @@ const recipes: Recipe[] = [
       { label: "Low-prep", color: "#BDDFD3" },
       { label: "Leftovers welcome", color: "#D7CFBA" },
       { label: "Energy boost", color: "#C7F8C5" },
+      { label: "Heart healthy", color: "#FF9999" },
     ],
   },
   {

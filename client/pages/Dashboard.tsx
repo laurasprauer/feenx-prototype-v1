@@ -266,7 +266,7 @@ export default function Dashboard() {
       <div className="max-w-6xl mx-auto px-4 py-6">
         {/* User Greeting */}
         <div className="flex items-center gap-4 mb-8">
-          <div className="w-15 h-15 rounded-full border border-[#1D2F29] bg-white shadow-md overflow-hidden">
+          <div className="w-[60px] h-[60px] rounded-full border border-[#1D2F29] bg-white shadow-md overflow-hidden">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F266bc377e3374574a92ed7ad03b8b7e7%2F572fbbd844e2486fbda2dc8f56c0d764?format=webp&width=800"
               alt="Profile"

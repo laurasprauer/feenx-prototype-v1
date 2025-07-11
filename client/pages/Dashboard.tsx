@@ -797,9 +797,9 @@ export default function Dashboard() {
 
               {/* Action Buttons */}
               <div className="flex gap-4 mt-6">
-                <div className="flex-1">
+                <div className="flex-1 max-w-[250px]">
                   <div className="flex rounded-lg overflow-hidden">
-                    <div className="bg-[#1D2F29] p-4 flex items-center justify-center">
+                    <div className="bg-[#1D2F29] p-4 flex items-center justify-start">
                       <svg
                         width="24"
                         height="24"
